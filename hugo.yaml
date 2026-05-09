@@ -1,0 +1,168 @@
+baseURL: 'https://aitoolsmaster.com'
+locale: en-US
+title: 'AI Tools Master'
+theme: 'PaperMod'
+
+# 网站语言
+languageCode: en-us
+defaultContentLanguage: en
+
+# SEO 核心设置
+enableRobotsTXT: true
+enableGitInfo: true
+canonifyURLs: true
+
+# 生成设置
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+paginate: 20
+
+# PaperMod 主题配置
+params:
+  env: production
+  title: 'AI Tools Master'
+  description: 'Find the best AI tools for every need. Expert reviews, in-depth comparisons, and honest guides to help you choose the right AI software.'
+  keywords: [AI tools, artificial intelligence, AI software, best AI tools, AI comparison, AI reviews, machine learning tools, ChatGPT alternatives, AI productivity]
+  author: 'AI Tools Master Team'
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+
+  # 广告位设置
+  adsense: true
+  adsense_code: 'ca-pub-xxxxxxxxxxxxxx'
+
+  # 首页布局
+  homeInfoParams:
+    Title: 'Welcome to AI Tools Master'
+    Content: "We review, compare, and rank the best AI tools so you don't have to waste time guessing. From writing assistants to code generators, find the perfect AI for your workflow."
+
+  # Social icons
+  socialIcons:
+    - name: github
+      url: 'https://github.com/any789'
+    - name: rss
+      url: 'index.xml'
+
+  # SEO
+  images:
+    - 'images/og-image.png'
+
+  # 封面设置
+  cover:
+    hidden: false
+    hiddenInList: false
+    hiddenInSingle: false
+    linkFullImages: true
+
+  # 编辑链接
+  editPost:
+    URL: ''
+    Text: '' 
+    appendFilePath: false
+
+  # Schema / OpenGraph / Twitter Cards
+  label:
+    text: 'AI Tools Master'
+    icon: /images/logo.svg
+    iconHeight: 32
+
+  # Analytics
+  analytics:
+    google:
+      SiteVerificationTag: ''
+    baidu:
+      SiteVerificationTag: ''
+
+  # 资产优化
+  assets:
+    favicon: /images/favicon.ico
+    favicon16x16: /images/favicon-16x16.png
+    favicon32x32: /images/favicon-32x32.png
+    apple_touch_icon: /images/apple-touch-icon.png
+
+# 菜单导航
+menu:
+  main:
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    - identifier: archives
+      name: Archives
+      url: /archives/
+      weight: 30
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 40
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 50
+
+# 分类法
+taxonomies:
+  category: categories
+  tag: tags
+
+# 输出格式
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# Markdown
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    style: monokai
+
+# 隐私设置
+privacy:
+  disqus:
+    disable: true
+  googleAnalytics:
+    anonymizeIP: true
+    respectDoNotTrack: true
+    useSessionStorage: false
+  instagram:
+    disable: true
+  vimeo:
+    disable: true
+  x:
+    enableDNT: true
+    simple: true
+  youtube:
+    disable: false
+    privacyEnhanced: true
+
+# 权限
+security:
+  enableInlineShortcodes: true
