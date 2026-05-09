@@ -53,6 +53,7 @@ params:
   homeInfoParams:
     Title: 'Welcome to AI Tools Master'
     Content: "We review, compare, and rank the best AI tools so you don't have to waste time guessing. From writing assistants to code generators, find the perfect AI for your workflow."
+    ShowCategories: true
 
   # Social icons
   socialIcons:
