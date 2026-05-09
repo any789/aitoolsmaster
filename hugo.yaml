@@ -27,8 +27,8 @@ params:
   description: 'Find the best AI tools for every need. Expert reviews, in-depth comparisons, and honest guides to help you choose the right AI software.'
   keywords: [AI tools, artificial intelligence, AI software, best AI tools, AI comparison, AI reviews, machine learning tools, ChatGPT alternatives, AI productivity]
   author: 'AI Tools Master Team'
-  defaultTheme: auto
-  disableThemeToggle: false
+  defaultTheme: dark
+  disableThemeToggle: true
   ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: true
