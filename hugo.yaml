@@ -1,4 +1,5 @@
-baseURL: 'https://aitoolsmaster.com'
+baseURL: 'https://any789.github.io/aitoolsmaster/'
+publishDir: 'docs'
 locale: en-US
 title: 'AI Tools Master'
 theme: 'PaperMod'
