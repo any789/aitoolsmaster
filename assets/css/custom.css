@@ -6,12 +6,12 @@
 
 /* --- Premium Color Palette --- */
 :root {
-  --primary: #07080a;
-  --secondary: #11161e;
-  --tertiary: #19202b;
-  --surface: #161c26;
-  --border: #283040;
-  --border-light: #1d2432;
+  --primary: #000000;
+  --secondary: #0a0d14;
+  --tertiary: #121724;
+  --surface: #0e121c;
+  --border: #1c2333;
+  --border-light: #141a28;
   --text-primary: #ffffff;
   --text-secondary: #dce1ed;
   --text-tertiary: #9ca3b8;
