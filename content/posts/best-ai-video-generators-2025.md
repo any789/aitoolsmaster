@@ -8,7 +8,7 @@ tags:
   - AI content creation
   - Runway
   - Sora
-date: 2025-05-10
+date: 2026-05-10
 ---
 
 # Best AI Video Generators in 2026: From Text to Video, Ranked

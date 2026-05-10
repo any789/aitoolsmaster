@@ -1,6 +1,6 @@
 ---
 title: "Best Free AI Tools in 2026: Actually Useful Ones That Don't Hide Behind Paywalls"
-date: "2025-05-10"
+date: "2026-05-10"
 description: "A no-fluff tour of the best genuinely free AI tools in 2026 — ChatGPT, Claude, Google Gemini, Canva AI, Stable Diffusion, and more. What you actually get, what you're locked out of, and whether the free tier is worth your time."
 ogImage: "/images/posts/best-free-ai-tools-2025.jpg"
 tags: ["ai-tools", "free-tools", "chatgpt", "claude", "gemini", "canva", "stable-diffusion", "perplexity", "leonardo-ai", "grammarly"]

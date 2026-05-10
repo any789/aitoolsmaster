@@ -1,7 +1,7 @@
 ---
 title: "Best AI Tools for Social Media Marketing in 2026"
 description: "The definitive guide to AI-powered social media tools for content creation, scheduling, and analytics. Covering ChatGPT, Jasper, Canva AI, Buffer, Hootsuite, and Vista Social."
-date: 2025-05-10
+date: 2026-05-10
 author: "AI Tools Master Staff"
 categories: ["Social Media", "AI Tools", "Marketing"]
 tags: ["ChatGPT", "Jasper", "Canva", "Buffer", "Hootsuite", "Vista Social", "Content Creation", "Social Media Scheduling"]

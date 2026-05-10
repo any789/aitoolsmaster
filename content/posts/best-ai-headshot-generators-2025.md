@@ -1,6 +1,6 @@
 ---
 title: "Best AI Headshot & Professional Photo Generators in 2026"
-date: "2025-05-10"
+date: "2026-05-10"
 description: "We tested HeadshotPro, Secta AI, StudioShot, Dreamwave, Fotor AI, and Remini to find out which AI headshot generators actually deliver professional-quality results — and whether any can truly replace a real photographer."
 image: "images/best-ai-headshot-generators-2025.jpg"
 tags: ["AI Headshot", "AI Photo", "HeadshotPro", "Secta AI", "StudioShot", "Dreamwave", "Fotor", "Remini", "Professional Headshots", "LinkedIn Photos"]

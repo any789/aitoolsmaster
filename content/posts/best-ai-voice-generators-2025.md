@@ -10,7 +10,7 @@ tags:
   - Play.ht
   - Murf.ai
   - Amazon Polly
-date: 2025-05-10
+date: 2026-05-10
 ---
 
 # Best AI Voice Generators & Text-to-Speech in 2026: Tested & Compared

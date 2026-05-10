@@ -1,6 +1,6 @@
 ---
 title: "Best AI SEO Tools in 2026: Rank Higher with Less Work"
-date: 2025-05-10
+date: 2026-05-10
 categories:
   - AI SEO Tools
 tags:

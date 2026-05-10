@@ -9,7 +9,7 @@ tags:
   - DALL-E
   - Midjourney
   - Stable Diffusion
-date: 2025-05-10
+date: 2026-05-10
 ---
 
 # Best AI Image Generators in 2026: Tested & Compared
