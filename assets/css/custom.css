@@ -7,11 +7,11 @@
 /* --- Premium Color Palette --- */
 :root {
   --primary: #000000;
-  --secondary: #0a0d14;
-  --tertiary: #121724;
-  --surface: #0e121c;
-  --border: #1c2333;
-  --border-light: #141a28;
+  --secondary: #05070a;
+  --tertiary: #0c1018;
+  --surface: #080b10;
+  --border: #141a24;
+  --border-light: #0e131c;
   --text-primary: #ffffff;
   --text-secondary: #dce1ed;
   --text-tertiary: #9ca3b8;
