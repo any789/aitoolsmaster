@@ -160,7 +160,7 @@ body {
 /* --- Post Meta --- */
 .post-meta,
 .entry-footer {
-  color: var(--text-secondary);
+  color: #a0a8bc;
   font-size: 0.8em;
 }
 
