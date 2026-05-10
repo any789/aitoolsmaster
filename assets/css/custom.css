@@ -31,9 +31,19 @@ body {
   font-size: 16px;
   line-height: 1.75;
   color: var(--text-primary);
-  background: var(--primary);
+  background: #000000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Force all major containers to pure black background */
+.main,
+.post-single,
+.page,
+.list,
+article,
+.post-entry {
+  background: #000000;
 }
 
 /* --- Navigation --- */
