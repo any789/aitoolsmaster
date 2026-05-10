@@ -1,5 +1,5 @@
 ---
-title: "Best AI Note-Taking & Productivity Tools in 2025: Tested & Compared"
+title: "Best AI Note-Taking & Productivity Tools in 2026: Tested & Compared"
 date: 2025-05-10
 lastmod: 2025-05-10
 draft: false
@@ -143,7 +143,7 @@ Pricing:
 - Business: $33.99/user/mo — advanced admin, SSO
 - Enterprise: Custom
 
-Bottom line: Best for live captioning and in-person recording. For virtual meeting transcription with deep integrations, Fireflies is the stronger choice in 2025.
+Bottom line: Best for live captioning and in-person recording. For virtual meeting transcription with deep integrations, Fireflies is the stronger choice in 2026.
 
 ---
 
