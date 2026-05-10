@@ -106,22 +106,26 @@ menu:
       name: Categories
       url: /aitoolsmaster/categories/
       weight: 10
+    - identifier: latest
+      name: Latest
+      url: /aitoolsmaster/posts/
+      weight: 15
     - identifier: tags
       name: Tags
       url: /aitoolsmaster/tags/
       weight: 20
-    - identifier: archives
-      name: Archives
-      url: /aitoolsmaster/archives/
-      weight: 30
+    - identifier: top
+      name: Top Rated
+      url: /aitoolsmaster/tags/
+      weight: 25
     - identifier: about
       name: About
       url: /aitoolsmaster/about/
-      weight: 40
+      weight: 30
     - identifier: search
       name: Search
       url: /aitoolsmaster/search/
-      weight: 50
+      weight: 40
 
 # 分类法
 taxonomies:
