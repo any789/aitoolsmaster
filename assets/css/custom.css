@@ -37,13 +37,14 @@ body {
 }
 
 /* Force all major containers to pure black background */
+body,
 .main,
 .post-single,
 .page,
 .list,
-article,
+.first-entry,
 .post-entry {
-  background: #000000;
+  background: #000000 !important;
 }
 
 /* --- Navigation --- */
