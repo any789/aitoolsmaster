@@ -43,7 +43,7 @@ ChatGPT Plus runs $20/month for GPT-4 access. The Team plan is $25/user/month. F
 
 ### Jasper
 
-Jasper started as a general AI writing assistant but has leaned hard into marketing-specific use cases. By 2025, it's arguably the best tool for brand-consistent social content at scale.
+Jasper started as a general AI writing assistant but has leaned hard into marketing-specific use cases. By 2026, it's arguably the best tool for brand-consistent social content at scale.
 
 **What it does well:**
 
@@ -53,7 +53,7 @@ The platform-specific templates are genuinely useful. There are templates optimi
 
 Jasper also handles content repurposing better than most. Feed it a long-form blog post or video transcript, and it can produce a month's worth of social posts in different formats. The bulk generation feature lets you batch-produce 20 posts at once, review them in a spreadsheet-like interface, and approve or edit before exporting.
 
-The 2025 updates added real-time trend analysis integration. Jasper can pull in current conversations from your niche and suggest content angles that are actually timely, not generic.
+The 2026 updates added real-time trend analysis integration. Jasper can pull in current conversations from your niche and suggest content angles that are actually timely, not generic.
 
 **Where it falls short:**
 
@@ -77,7 +77,7 @@ Magic Media is the standout. Type a prompt and Canva generates images or short v
 
 Magic Write handles text generation within Canva. You can generate captions directly inside the design editor rather than switching tabs. The copy isn't as sophisticated as ChatGPT or Jasper, but for quick caption drafts that need minimal editing, it works.
 
-The 2025 updates brought Gradient Text (finally), enhanced video editing with Canva Video 2.0, and AI-powered bulk resize that adapts a design to different platform dimensions without breaking the layout. That last one alone is a massive time-saver for anyone posting across multiple platforms.
+The 2026 updates brought Gradient Text (finally), enhanced video editing with Canva Video 2.0, and AI-powered bulk resize that adapts a design to different platform dimensions without breaking the layout. That last one alone is a massive time-saver for anyone posting across multiple platforms.
 
 Brand Kit integration means your fonts, colors, and logos are always available. The AI respects your brand guidelines when generating designs, which keeps things consistent without manual oversight.
 
@@ -95,11 +95,11 @@ Canva Free is genuinely usable. Canva Pro runs $13/month for individuals and cov
 
 ## Scheduling and Publishing: Buffer AI vs. Hootsuite
 
-Scheduling tools have been around forever, but the AI layer is what separates the 2025 generation from their predecessors.
+Scheduling tools have been around forever, but the AI layer is what separates the 2026 generation from their predecessors.
 
 ### Buffer AI
 
-Buffer has always been the friendly, affordable option in social scheduling. Its 2025 AI features keep that spirit while adding genuinely useful automation.
+Buffer has always been the friendly, affordable option in social scheduling. Its 2026 AI features keep that spirit while adding genuinely useful automation.
 
 **What it does well:**
 
@@ -125,7 +125,7 @@ Buffer Free covers three channels and basic scheduling. Buffer Essentials is $6/
 
 ### Hootsuite
 
-Hootsuite is the veteran of social media management, and its 2025 AI overhaul has kept it competitive against newer, nimbler tools.
+Hootsuite is the veteran of social media management, and its 2026 AI overhaul has kept it competitive against newer, nimbler tools.
 
 **What it does well:**
 

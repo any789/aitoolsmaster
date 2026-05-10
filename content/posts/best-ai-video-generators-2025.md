@@ -38,7 +38,7 @@ I spent weeks testing six of the most talked-about AI video generators in 2026: 
 
 **Rating: 4.5/5**
 
-Runway has been in the AI video game longer than almost anyone, and it shows. Gen-3 Alpha, released in late 2024, was a massive leap over Gen-2. By early 2025, the Gen-4 model started rolling out, bringing better consistency, longer clips, and actual camera controls.
+Runway has been in the AI video game longer than almost anyone, and it shows. Gen-3 Alpha, released in late 2024, was a massive leap over Gen-2. By early 2026, the Gen-4 model started rolling out, bringing better consistency, longer clips, and actual camera controls.
 
 ### What It Does Well
 
@@ -66,7 +66,7 @@ Filmmakers prototyping scenes, video editors needing quick B-roll, and anyone wh
 
 **Rating: 3.5/5**
 
-OpenAI's Sora was the most hyped AI video launch maybe ever. The early demo reels in early 2024 showed clips that genuinely looked like they were shot for a major studio. In December 2024, Sora finally launched to ChatGPT subscribers. By mid-2025, the reality is more complicated.
+OpenAI's Sora was the most hyped AI video launch maybe ever. The early demo reels in early 2024 showed clips that genuinely looked like they were shot for a major studio. In December 2024, Sora finally launched to ChatGPT subscribers. By mid-2026, the reality is more complicated.
 
 ### What It Does Well
 
@@ -102,7 +102,7 @@ Kling comes from Kuaishou, the Chinese tech giant, and it has quietly become one
 
 Motion quality is where Kling excels. Characters move naturally. Walking cycles look like real walking. Running looks like running. This seems basic, but it is shockingly rare in AI video generation. Runway and Pika both struggle with this -- characters often slide or float instead of walking. Kling doesn't.
 
-Kling 2.0, released in early 2025, brought significant improvements in prompt adherence and visual quality. The text-to-video engine understands complex prompts with multiple elements. The image-to-video feature is excellent -- upload a photo and watch it animate with natural motion.
+Kling 2.0, released in early 2026, brought significant improvements in prompt adherence and visual quality. The text-to-video engine understands complex prompts with multiple elements. The image-to-video feature is excellent -- upload a photo and watch it animate with natural motion.
 
 The free tier is generous: 66 credits per day, which is enough for several clips. You don't need to pay anything to test it thoroughly. Paid plans start at around $10/month.
 
@@ -128,7 +128,7 @@ Anyone who needs realistic character motion and doesn't want to pay a monthly su
 
 **Rating: 3.8/5**
 
-Pika Labs burst onto the scene in 2024 with a focus on cinematic, moody, aesthetic clips. By 2025, Pika 2.5 has refined the formula, but the trade-offs remain.
+Pika Labs burst onto the scene in 2024 with a focus on cinematic, moody, aesthetic clips. By 2026, Pika 2.5 has refined the formula, but the trade-offs remain.
 
 ### What It Does Well
 
@@ -261,10 +261,10 @@ If you need avatars, HeyGen is the clear winner for quality, and Synthesia is th
 
 If you want to get started without spending money, Kling's free tier is the most generous and produces solid results. Pika's free tier is a close second if you want aesthetic social clips.
 
-And if Sora ever sorts out its availability issues and drops the watermark restriction, it could leapfrog everything else. But in mid-2025, it is still more promise than product.
+And if Sora ever sorts out its availability issues and drops the watermark restriction, it could leapfrog everything else. But in mid-2026, it is still more promise than product.
 
 The bottom line: AI video generation is useful right now, but it is not a replacement for a human filmmaker. Think of these tools as very fast, very cheap concept artists. They will get you 80% of the way there. That last 20% -- the taste, the storytelling, the intentionality -- that is still your job.
 
 ---
 
-*This review was conducted in May 2025. Pricing and features change rapidly in the AI space. Check each tool's website for current pricing.*
+*This review was conducted in May 2026. Pricing and features change rapidly in the AI space. Check each tool's website for current pricing.*

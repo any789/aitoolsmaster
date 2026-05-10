@@ -10,8 +10,8 @@ categories: ["AI Writing Tools"]
 showToc: true
 weight: 1
 cover:
-  image: "images/writing-tools-2025.webp"
-  alt: "Best AI Writing Tools 2025 Comparison"
+  image: "images/writing-tools-2026.webp"
+  alt: "Best AI Tools 2026 Comparison"
   caption: "Our top picks for AI writing software tested in 2026"
 ---
 
@@ -309,4 +309,4 @@ And remember: the best AI writing tool is one that fits your specific workflow. 
 
 ---
 
-*Last updated: May 2025. Prices and features may change. We update this guide quarterly based on new releases and testing.*
+*Last updated: May 2026. Prices and features may change. We update this guide quarterly based on new releases and testing.*

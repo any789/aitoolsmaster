@@ -60,7 +60,7 @@ Cursor has a reliability problem. The "Taking longer than expected" hang on mode
 
 The frequent UI churn is exhausting. Cursor ships updates fast, and they're not shy about rearranging the interface. Tab groups, Composer panels, and chat modes change positions and behaviors between versions. If you're the kind of person who hates it when your IDE suddenly looks different, Cursor will test your patience.
 
-Security has been a real concern. In early 2025, critical vulnerabilities were disclosed in Cursor's bundled Chromium (CVE-2025-7656 and friends). The editor ships with its own runtime, which means you're dependent on Cursor's update cadence for security patches, not your system's.
+Security has been a real concern. In early 2026, critical vulnerabilities were disclosed in Cursor's bundled Chromium (CVE-2025-7656 and friends). The editor ships with its own runtime, which means you're dependent on Cursor's update cadence for security patches, not your system's.
 
 The subscription cost adds up. At $20/month for the Pro tier, it's double what Copilot costs. If you're using a more expensive model like Claude Opus on your own key, you're paying for inference on top of the subscription. Heavy users can easily spend $50-80/month combined.
 
@@ -136,7 +136,7 @@ Enterprise features are comprehensive. Tabnine offers SSO, audit logging, role-b
 
 Tabnine works in more editors than any other tool: VS Code, JetBrains (all of them), Vim/Neovim, Emacs, Eclipse, Sublime Text, and more. If you use an unusual editor, Tabnine probably supports it.
 
-Code review automation is legitimately useful. Tabnine's code review agent won Best Innovation in AI Coding at the 2025 AI TechAwards, and it deserves it. It catches issues that other tools miss and provides inline suggestions that make sense in context.
+Code review automation is legitimately useful. Tabnine's code review agent won Best Innovation in AI Coding at the 2026 AI TechAwards, and it deserves it. It catches issues that other tools miss and provides inline suggestions that make sense in context.
 
 Tabnine offers customizable models. You can fine-tune Tabnine's models on your team's codebase, which means the suggestions actually match your coding patterns rather than generic best practices.
 
@@ -193,4 +193,4 @@ Pick your annoyances.
 
 ---
 
-*Disclaimer: I have no affiliation with any of the companies mentioned. Pricing is current as of May 2025 and may change.*
+*Disclaimer: I have no affiliation with any of the companies mentioned. Pricing is current as of May 2026 and may change.*
