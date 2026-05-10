@@ -4,23 +4,23 @@
 
 /* --- Premium Color Palette --- */
 :root {
-  --primary: #0a0a0b;
-  --secondary: #111113;
-  --tertiary: #1a1a1e;
-  --surface: #18181b;
-  --border: #27272a;
-  --border-light: #1e1e22;
-  --text-primary: #fafafa;
-  --text-secondary: #a1a1aa;
-  --text-tertiary: #71717a;
-  --accent: #3b82f6;
-  --accent-hover: #60a5fa;
-  --accent-subtle: rgba(59, 130, 246, 0.08);
-  --green: #22c55e;
+  --primary: #07080a;
+  --secondary: #0d0f13;
+  --tertiary: #14171f;
+  --surface: #11141a;
+  --border: #1e2330;
+  --border-light: #181c26;
+  --text-primary: #edf0f7;
+  --text-secondary: #9ca3b5;
+  --text-tertiary: #6b7284;
+  --accent: #c89b3c;
+  --accent-hover: #dbb15e;
+  --accent-subtle: rgba(200, 155, 60, 0.08);
+  --green: #34d399;
   --yellow: #eab308;
-  --red: #ef4444;
-  --code-bg: #18181b;
-  --nav-bg: rgba(10, 10, 11, 0.85);
+  --red: #f87171;
+  --code-bg: #11141a;
+  --nav-bg: rgba(7, 8, 10, 0.88);
 }
 
 /* --- Typography --- */
