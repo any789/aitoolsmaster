@@ -68,7 +68,10 @@ body, .main, .post-single, .page, .list, .first-entry, .post-entry, article {
 /* --- accent color everywhere --- */
 .post-content a { color: var(--accent); border-bottom: 1px solid transparent; text-decoration: none; }
 .post-content a:hover { border-bottom-color: var(--accent); }
-.post-tags a:hover, .category-badge:hover { border-color: var(--accent) !important; color: var(--accent) !important; }
+.post-tags a { color: var(--accent) !important; border-color: rgba(255,255,255,0.06) !important; }
+.post-tags a:hover { border-color: var(--accent) !important; }
+.category-badge { border: 1px solid rgba(255,255,255,0.06); color: rgba(255,255,255,0.5); background: transparent; border-radius: 100px; padding: 5px 14px; font-size: 0.78em; transition: all 0.25s; }
+.category-badge:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-subtle); }
 .toc details summary { color: var(--accent) !important; }
 .post-content code { color: var(--accent-hover) !important; }
 .post-content blockquote { border-left-color: var(--accent) !important; background: var(--accent-subtle) !important; }
