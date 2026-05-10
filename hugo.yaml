@@ -104,23 +104,23 @@ menu:
   main:
     - identifier: categories
       name: Categories
-      url: /categories/
+      url: /aitoolsmaster/categories/
       weight: 10
     - identifier: tags
       name: Tags
-      url: /tags/
+      url: /aitoolsmaster/tags/
       weight: 20
     - identifier: archives
       name: Archives
-      url: /archives/
+      url: /aitoolsmaster/archives/
       weight: 30
     - identifier: about
       name: About
-      url: /about/
+      url: /aitoolsmaster/about/
       weight: 40
     - identifier: search
       name: Search
-      url: /search/
+      url: /aitoolsmaster/search/
       weight: 50
 
 # 分类法
