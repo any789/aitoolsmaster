@@ -105,9 +105,23 @@ a:hover { color: var(--accent); }
     <a href="/" class="nav-logo">AI<span>Tools Master</span></a>
     <ul class="nav-links">
       <li><a href="/">Home</a></li>
-      <li><a href="/articles/">Articles</a></li>
-      <li><a href="/categories/">Categories</a></li>
-    </ul>
+      <li><a href="/articles-list.html">All Articles</a></li>
+      <a href="/articles-list.html#ai-coding" class="nav-cat">AI Coding</a>
+      <a href="/articles-list.html#ai-comparison" class="nav-cat">AI Comparison</a>
+      <a href="/articles-list.html#ai-design" class="nav-cat">AI Design</a>
+      <a href="/articles-list.html#ai-image" class="nav-cat">AI Image</a>
+      <a href="/articles-list.html#ai-insights" class="nav-cat">AI Insights</a>
+      <a href="/articles-list.html#ai-music" class="nav-cat">AI Music</a>
+      <a href="/articles-list.html#ai-productivity" class="nav-cat">AI Productivity</a>
+      <a href="/articles-list.html#ai-seo" class="nav-cat">AI SEO</a>
+      <a href="/articles-list.html#ai-video" class="nav-cat">AI Video</a>
+      <a href="/articles-list.html#ai-voice" class="nav-cat">AI Voice</a>
+      <a href="/articles-list.html#data-analysis" class="nav-cat">Data Analysis</a>
+      <a href="/articles-list.html#free-tools" class="nav-cat">Free Tools</a>
+      <a href="/articles-list.html#guides" class="nav-cat">Guides</a>
+      <a href="/articles-list.html#productivity" class="nav-cat">Productivity</a>
+      <a href="/articles-list.html#social-media" class="nav-cat">Social Media</a>
+      </ul>
     <button class="nav-toggle">☰</button>
   </div>
 </nav>
@@ -115,6 +129,10 @@ a:hover { color: var(--accent); }
 <section class="hero">
   <h1>Honest AI Tool Reviews</h1>
   <p>We test, compare, and rank the best AI tools — no hype, no fluff. Just what works and what doesn't.</p>
+  <div style="margin-top:24px;max-width:480px;margin-left:auto;margin-right:auto">
+    <input type="text" id="search-input" placeholder="Search articles..." style="width:100%;padding:12px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:0.95em;outline:none;font-family:var(--font)">
+    <div id="search-results" style="margin-top:4px;text-align:left;display:none"></div>
+  </div>
 </section>
 
 <div class="main">
@@ -513,5 +531,44 @@ a:hover { color: var(--accent); }
   <p style="margin-top:8px"><a href="https://topaitools.vip">topaitools.vip</a></p>
 </footer>
 
+<script>
+const articles = [
+  {title:"AI Tools Buying Guide 2026: How to Choose the Right AI Tool",url:"/articles/ai-tools-buying-guide-2026.html",cat:"Guides"},
+  {title:"Best AI Coding Assistants in 2026: Copilot vs Cursor vs Claude",url:"/articles/best-ai-coding-assistants-2026.html",cat:"AI Coding"},
+  {title:"Best AI Data Analysis Tools in 2026: From Spreadsheets to Insights",url:"/articles/best-ai-data-analysis-tools-2026.html",cat:"Data Analysis"},
+  {title:"Best AI Design Tools in 2026: Canva, Galileo & Beyond",url:"/articles/best-ai-design-tools-2026.html",cat:"AI Design"},
+  {title:"Best AI Email Assistants in 2026: Write Better Emails Faster",url:"/articles/best-ai-email-assistants-2026.html",cat:"Productivity"},
+  {title:"Best AI Headshot Generators in 2026: Professional Photos Without a Studio",url:"/articles/best-ai-headshot-generators-2026.html",cat:"AI Image"},
+  {title:"Best AI Image Generators in 2026: Midjourney vs DALL-E 3 vs Stable Diffusion",url:"/articles/best-ai-image-generators-2026.html",cat:"AI Image"},
+  {title:"Best AI Logo Makers in 2026: Design a Logo in Minutes",url:"/articles/best-ai-logo-makers-2026.html",cat:"AI Design"},
+  {title:"Best AI Meeting Summarizers in 2026: Never Take Notes Again",url:"/articles/best-ai-meeting-summarizers-2026.html",cat:"Productivity"},
+  {title:"Best AI Music Generators in 2026: Create Original Music with AI",url:"/articles/best-ai-music-generators-2026.html",cat:"AI Music"},
+  {title:"Best AI Note-Taking Tools in 2026: Tested & Compared",url:"/articles/best-ai-note-taking-tools-2026.html",cat:"Productivity"},
+  {title:"Best AI Presentation Makers in 2026: Tested & Compared",url:"/articles/best-ai-presentation-makers-2026.html",cat:"Productivity"},
+  {title:"Best AI Productivity Tools in 2026: 10 Tools We Actually Use",url:"/articles/best-ai-productivity-tools-2026.html",cat:"Productivity"},
+  {title:"Best AI SEO Tools in 2026: Ranked & Reviewed",url:"/articles/best-ai-seo-tools-2026.html",cat:"AI SEO"},
+  {title:"Best AI Social Media Tools in 2026: Ranked & Reviewed",url:"/articles/best-ai-social-media-tools-2026.html",cat:"Social Media"},
+  {title:"Best AI Translation Tools in 2026: DeepL, Google Translate & More",url:"/articles/best-ai-translation-tools-2026.html",cat:"AI Productivity"},
+  {title:"Best AI Video Generators in 2026: Ranked & Reviewed",url:"/articles/best-ai-video-generators-2026.html",cat:"AI Video"},
+  {title:"Best AI Voice Generators in 2026: ElevenLabs, PlayHT & More",url:"/articles/best-ai-voice-generators-2026.html",cat:"AI Voice"},
+  {title:"Best Free AI Tools in 2026: Actually Useful, No Paywalls",url:"/articles/best-free-ai-tools-2026.html",cat:"Free Tools"},
+  {title:"ChatGPT vs Claude vs Gemini 2026: Which AI Assistant Wins?",url:"/articles/chatgpt-vs-claude-vs-gemini-2026.html",cat:"AI Comparison"},
+  {title:"Elon Musks 2026 AI Vision: AGI, Optimus Robots, and a Painful Transition",url:"/articles/elon-musk-agi-humanoid-robots-2026.html",cat:"AI Insights"},
+  {title:"Jensen Huangs 2026 Vision: The AI Inference Revolution Has Begun",url:"/articles/jensen-huang-ai-inference-revolution-2026.html",cat:"AI Insights"},
+  {title:"Zhou Hongyis 2026 AI Predictions: The Year of 10 Billion AI Agents",url:"/articles/zhou-hongyi-2026-ai-predictions.html",cat:"AI Insights"},
+];
+const input = document.getElementById('search-input');
+const results = document.getElementById('search-results');
+input.addEventListener('input', function() {
+  const q = this.value.toLowerCase().trim();
+  if (!q) { results.style.display = 'none'; return; }
+  const matches = articles.filter(a => a.title.toLowerCase().includes(q));
+  if (matches.length === 0) { results.style.display = 'none'; return; }
+  results.style.display = 'block';
+  results.innerHTML = matches.slice(0, 8).map(a =>
+    `<a href="${a.url}" style="display:block;padding:8px 12px;color:var(--text-secondary);text-decoration:none;border-bottom:1px solid var(--border);font-size:0.88em;text-align:left"><span style="color:var(--accent);font-size:0.78em">${a.cat}</span> ${a.title}</a>`
+  ).join('');
+});
+</script>
 </body>
 </html>

@@ -56,6 +56,10 @@ a:hover { color: var(--accent); }
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">AI<span>Tools Master</span></a><ul class="nav-links"><li><a href="/">Home</a></li><li><a href="/articles/">Articles</a></li></ul><button class="nav-toggle">☰</button></div></nav>
 <main class="main">
 <h1 class="page-title">All Articles</h1>
+<div style="margin-bottom:28px;max-width:480px">
+    <input type="text" id="search-input-al" placeholder="Search articles..." style="width:100%;padding:12px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:0.95em;outline:none;font-family:var(--font)">
+    <div id="search-results-al" style="margin-top:4px;display:none"></div>
+  </div>
 <div class="tags">
   <a href="/categories/ai-writing/" class="tag">AI Writing</a>
   <a href="/categories/ai-image/" class="tag">AI Image</a>
@@ -437,5 +441,46 @@ a:hover { color: var(--accent); }
 <div class="ad-slot"><span class="ad-label">Sponsor</span><span class="ad-placeholder">Bottom ad</span></div>
 </main>
 <footer class="footer"><p>&copy; 2026 AI Tools Master. <a href="https://topaitools.vip">topaitools.vip</a></p></footer>
+<script>
+const articles2 = [
+  {title:"AI Tools Buying Guide 2026: How to Choose the Right AI Tool",url:"/articles/ai-tools-buying-guide-2026.html",cat:"Guides"},
+  {title:"Best AI Coding Assistants in 2026: Copilot vs Cursor vs Claude",url:"/articles/best-ai-coding-assistants-2026.html",cat:"AI Coding"},
+  {title:"Best AI Data Analysis Tools in 2026: From Spreadsheets to Insights",url:"/articles/best-ai-data-analysis-tools-2026.html",cat:"Data Analysis"},
+  {title:"Best AI Design Tools in 2026: Canva, Galileo & Beyond",url:"/articles/best-ai-design-tools-2026.html",cat:"AI Design"},
+  {title:"Best AI Email Assistants in 2026: Write Better Emails Faster",url:"/articles/best-ai-email-assistants-2026.html",cat:"Productivity"},
+  {title:"Best AI Headshot Generators in 2026: Professional Photos Without a Studio",url:"/articles/best-ai-headshot-generators-2026.html",cat:"AI Image"},
+  {title:"Best AI Image Generators in 2026: Midjourney vs DALL-E 3 vs Stable Diffusion",url:"/articles/best-ai-image-generators-2026.html",cat:"AI Image"},
+  {title:"Best AI Logo Makers in 2026: Design a Logo in Minutes",url:"/articles/best-ai-logo-makers-2026.html",cat:"AI Design"},
+  {title:"Best AI Meeting Summarizers in 2026: Never Take Notes Again",url:"/articles/best-ai-meeting-summarizers-2026.html",cat:"Productivity"},
+  {title:"Best AI Music Generators in 2026: Create Original Music with AI",url:"/articles/best-ai-music-generators-2026.html",cat:"AI Music"},
+  {title:"Best AI Note-Taking Tools in 2026: Tested & Compared",url:"/articles/best-ai-note-taking-tools-2026.html",cat:"Productivity"},
+  {title:"Best AI Presentation Makers in 2026: Tested & Compared",url:"/articles/best-ai-presentation-makers-2026.html",cat:"Productivity"},
+  {title:"Best AI Productivity Tools in 2026: 10 Tools We Actually Use",url:"/articles/best-ai-productivity-tools-2026.html",cat:"Productivity"},
+  {title:"Best AI SEO Tools in 2026: Ranked & Reviewed",url:"/articles/best-ai-seo-tools-2026.html",cat:"AI SEO"},
+  {title:"Best AI Social Media Tools in 2026: Ranked & Reviewed",url:"/articles/best-ai-social-media-tools-2026.html",cat:"Social Media"},
+  {title:"Best AI Translation Tools in 2026: DeepL, Google Translate & More",url:"/articles/best-ai-translation-tools-2026.html",cat:"AI Productivity"},
+  {title:"Best AI Video Generators in 2026: Ranked & Reviewed",url:"/articles/best-ai-video-generators-2026.html",cat:"AI Video"},
+  {title:"Best AI Voice Generators in 2026: ElevenLabs, PlayHT & More",url:"/articles/best-ai-voice-generators-2026.html",cat:"AI Voice"},
+  {title:"Best Free AI Tools in 2026: Actually Useful, No Paywalls",url:"/articles/best-free-ai-tools-2026.html",cat:"Free Tools"},
+  {title:"ChatGPT vs Claude vs Gemini 2026: Which AI Assistant Wins?",url:"/articles/chatgpt-vs-claude-vs-gemini-2026.html",cat:"AI Comparison"},
+  {title:"Elon Musks 2026 AI Vision: AGI, Optimus Robots, and a Painful Transition",url:"/articles/elon-musk-agi-humanoid-robots-2026.html",cat:"AI Insights"},
+  {title:"Jensen Huangs 2026 Vision: The AI Inference Revolution Has Begun",url:"/articles/jensen-huang-ai-inference-revolution-2026.html",cat:"AI Insights"},
+  {title:"Zhou Hongyis 2026 AI Predictions: The Year of 10 Billion AI Agents",url:"/articles/zhou-hongyi-2026-ai-predictions.html",cat:"AI Insights"},
+];
+const inp2 = document.getElementById('search-input-al');
+const res2 = document.getElementById('search-results-al');
+if (inp2) {
+  inp2.addEventListener('input', function() {
+    const q = this.value.toLowerCase().trim();
+    if (!q) { res2.style.display = 'none'; return; }
+    const m = articles2.filter(a => a.title.toLowerCase().includes(q));
+    if (m.length === 0) { res2.style.display = 'none'; return; }
+    res2.style.display = 'block';
+    res2.innerHTML = m.slice(0, 8).map(a =>
+      `<a href="${a.url}" style="display:block;padding:8px 12px;color:var(--text-secondary);text-decoration:none;border-bottom:1px solid var(--border);font-size:0.88em"><span style="color:var(--accent);font-size:0.78em">${a.cat}</span> ${a.title}</a>`
+    ).join('');
+  });
+}
+</script>
 </body>
 </html>
