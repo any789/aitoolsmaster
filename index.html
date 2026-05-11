@@ -129,8 +129,22 @@ a:hover { color: var(--accent); }
 
   <h2 class="section-title">Latest Reviews</h2>
 
-  <div class="article-list" id="article-list">
-    <!-- 文章会由脚本动态加载 -->
+  <div class="article-list">
+    <a href="/articles/best-ai-note-taking-tools-2026.html" class="article-card">
+      <div class="article-meta"><span class="article-category">Productivity</span><span>May 11, 2026</span></div>
+      <h3>Best AI Note-Taking Tools in 2026: Tested & Compared</h3>
+      <p>We tested 7 AI note-taking apps including Jamie, Otter AI, Fireflies.ai, Krisp, and more.</p>
+    </a>
+    <a href="/articles/best-ai-presentation-makers-2026.html" class="article-card">
+      <div class="article-meta"><span class="article-category">Productivity</span><span>May 12, 2026</span></div>
+      <h3>Best AI Presentation Makers in 2026: Tested & Compared</h3>
+      <p>We tested 12 AI presentation tools including Gamma, Beautiful.ai, Canva, Plus AI, and Copilot.</p>
+    </a>
+    <a href="/articles/best-ai-writing-tools-2025.html" class="article-card">
+      <div class="article-meta"><span class="article-category">AI Writing</span><span>May 10, 2026</span></div>
+      <h3>Best AI Writing Tools in 2026: Tested & Compared</h3>
+      <p>Hands-on testing of ChatGPT, Jasper, Claude, and more.</p>
+    </a>
   </div>
 
   <div class="ad-slot">
@@ -144,33 +158,6 @@ a:hover { color: var(--accent); }
   <p>&copy; 2026 AI Tools Master. All rights reserved.</p>
   <p style="margin-top:8px"><a href="https://topaitools.vip">topaitools.vip</a></p>
 </footer>
-
-<script>
-// 从articles-list.html加载文章列表
-fetch('/articles-list.html')
-  .then(r => r.text())
-  .then(html => {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
-    const list = doc.getElementById('article-list-content');
-    if (list) {
-      document.getElementById('article-list').innerHTML = list.innerHTML;
-    }
-  })
-  .catch(() => {
-    // 如果articles-list.html不存在，用硬编码列表
-    document.getElementById('article-list').innerHTML = `
-      <a href="/articles/best-ai-note-taking-tools-2026.html" class="article-card">
-        <div class="article-meta">
-          <span class="article-category">Productivity</span>
-          <span>May 11, 2026</span>
-        </div>
-        <h3>Best AI Note-Taking Tools in 2026: Tested & Compared</h3>
-        <p>We tested 7 AI note-taking apps including Jamie, Otter AI, Fireflies.ai, Krisp, and more. Honest pros, cons, and pricing.</p>
-      </a>
-    `;
-  });
-</script>
 
 </body>
 </html>
