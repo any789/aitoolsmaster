@@ -134,6 +134,22 @@ a:hover { color: var(--accent); }
     <input type="text" id="search-input" placeholder="Search articles..." style="width:100%;padding:12px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:0.95em;outline:none;font-family:var(--font)">
     <div id="search-results" style="margin-top:4px;text-align:left;display:none"></div>
   </div>
+
+  <!-- 热门话题自动滚动 -->
+  <div style="margin-top:20px;overflow:hidden;position:relative;max-width:640px;margin-left:auto;margin-right:auto">
+    <div id="trending-scroll" style="display:flex;gap:10px;transition:transform 0.5s ease;white-space:nowrap;padding:4px 0">
+      <a href="/articles/chatgpt-vs-claude-vs-gemini-2026.html" class="trending-tag" style="display:inline-block;padding:6px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:100px;color:var(--text-secondary);font-size:0.82em;white-space:nowrap;flex-shrink:0">ChatGPT vs Claude vs Gemini</a>
+      <a href="/articles/this-week-in-ai-may-12-2026.html" class="trending-tag" style="display:inline-block;padding:6px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:100px;color:var(--text-secondary);font-size:0.82em;white-space:nowrap;flex-shrink:0">This Week in AI</a>
+      <a href="/articles/google-io-2026-ai-announcements.html" class="trending-tag" style="display:inline-block;padding:6px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:100px;color:var(--text-secondary);font-size:0.82em;white-space:nowrap;flex-shrink:0">Google I/O 2026</a>
+      <a href="/articles/zhou-hongyi-2026-ai-predictions.html" class="trending-tag" style="display:inline-block;padding:6px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:100px;color:var(--text-secondary);font-size:0.82em;white-space:nowrap;flex-shrink:0">AI Predictions 2026</a>
+      <a href="/articles/elon-musk-agi-humanoid-robots-2026.html" class="trending-tag" style="display:inline-block;padding:6px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:100px;color:var(--text-secondary);font-size:0.82em;white-space:nowrap;flex-shrink:0">Musk AGI Prediction</a>
+      <a href="/articles/jensen-huang-ai-inference-revolution-2026.html" class="trending-tag" style="display:inline-block;padding:6px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:100px;color:var(--text-secondary);font-size:0.82em;white-space:nowrap;flex-shrink:0">Jensen Huang Inference</a>
+      <a href="/articles/best-ai-coding-assistants-2026.html" class="trending-tag" style="display:inline-block;padding:6px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:100px;color:var(--text-secondary);font-size:0.82em;white-space:nowrap;flex-shrink:0">Best AI Coding Tools</a>
+      <a href="/articles/best-ai-video-generators-2026.html" class="trending-tag" style="display:inline-block;padding:6px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:100px;color:var(--text-secondary);font-size:0.82em;white-space:nowrap;flex-shrink:0">AI Video Generators</a>
+      <a href="/articles/best-ai-image-generators-2026.html" class="trending-tag" style="display:inline-block;padding:6px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:100px;color:var(--text-secondary);font-size:0.82em;white-space:nowrap;flex-shrink:0">AI Image Generators</a>
+      <a href="/articles/ai-coding-agents-vs-human-developers-2026.html" class="trending-tag" style="display:inline-block;padding:6px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:100px;color:var(--text-secondary);font-size:0.82em;white-space:nowrap;flex-shrink:0">AI vs Developers</a>
+    </div>
+  </div>
 </section>
 
 <div class="main">
@@ -613,6 +629,25 @@ input.addEventListener('input', function() {
     `<a href="${a.url}" style="display:block;padding:8px 12px;color:var(--text-secondary);text-decoration:none;border-bottom:1px solid var(--border);font-size:0.88em;text-align:left"><span style="color:var(--accent);font-size:0.78em">${a.cat}</span> ${a.title}</a>`
   ).join('');
 });
+</script>
+
+<!-- 热门话题自动滚动 -->
+<script>
+(function() {
+  const el = document.getElementById('trending-scroll');
+  if (!el) return;
+  let pos = 0;
+  const speed = 0.5; // px per frame
+  function scroll() {
+    pos += speed;
+    if (pos >= el.scrollWidth / 2) pos = 0;
+    el.style.transform = 'translateX(-' + pos + 'px)';
+    requestAnimationFrame(scroll);
+  }
+  // 复制内容实现无缝循环
+  el.innerHTML += el.innerHTML;
+  scroll();
+})();
 </script>
 </body>
 </html>
