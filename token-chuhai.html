@@ -170,7 +170,7 @@ async function sendMsg(){
     if(data.reply){
       addMsg(data.reply,'bot'); chatHistory.push({role:'assistant',content:data.reply});
       if(!emailCollected&&(data.reply.toLowerCase().includes('email')||data.reply.includes('@'))){
-        setTimeout(()=>{ const email=prompt('Please enter your email so we can follow up:'); if(email&&email.includes('@')){ emailCollected=true; addMsg(email,'user'); chatHistory.push({role:'user',content:email}); fetch(CHATBOT_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:email,history:chatHistory,email:email})}); }},500);
+
       }
     } else { addMsg('Sorry, something went wrong. Please try again.','bot'); }
   } catch(e){ hideLoading(); addMsg('Sorry, I cannot connect right now. Please try again later.','bot'); }

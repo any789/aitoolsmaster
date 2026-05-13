@@ -892,23 +892,7 @@ async function sendMsg() {
       addMsg(data.reply, 'bot');
       chatHistory.push({ role: 'assistant', content: data.reply });
 
-      // If bot asked for email and not collected yet
-      if (!emailCollected && (data.reply.toLowerCase().includes('email') || data.reply.includes('@'))) {
-        setTimeout(() => {
-          const email = prompt('Please enter your email so we can follow up:');
-          if (email && email.includes('@')) {
-            emailCollected = true;
-            addMsg(email, 'user');
-            chatHistory.push({ role: 'user', content: email });
-            // Send email to backend
-            fetch(CHATBOT_URL, {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ message: email, history: chatHistory, email: email }),
-            });
-          }
-        }, 500);
-      }
+
     } else {
       addMsg('Sorry, something went wrong. Please try again.', 'bot');
     }
