@@ -6,6 +6,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Tools Master — Honest AI Tool Reviews & Comparisons</title>
 <meta name="description" content="We review, compare, and rank the best AI tools. No hype, just honest opinions based on real testing.">
+<meta property="og:title" content="AI Tools Master — Honest AI Tool Reviews & Comparisons">
+<meta property="og:description" content="We test, compare, and rank the best AI tools — no hype, no fluff.">
+<meta property="og:url" content="https://topaitools.vip">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://topaitools.vip/images/trending-ai-1.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://topaitools.vip/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -89,13 +96,15 @@ a:hover { color: var(--accent); }
 /* Footer */
 .footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; color: var(--text-tertiary); font-size: 0.82em; }
 .footer a { color: var(--text-secondary); }
-.footer a:hover { color: var(--accent); }
+.nav-cats { display: flex; flex-wrap: wrap; gap: 8px; width: 100%; padding-top: 10px; padding-bottom: 8px; order: 3; }
+.nav-toggle { display: none; background: none; border: none; color: var(--text); font-size: 1.5em; cursor: pointer; }
 
-/* Responsive */
 @media (max-width: 768px) {
   .hero { padding: 100px 20px 40px; }
   .hero h1 { font-size: 1.8em; }
   .nav-links { display: none; }
+  .nav-cats { display: none; }
+  .nav-cats.show { display: flex; }
   .nav-toggle { display: block; }
   .article-card { padding: 16px 18px; }
   .main { padding: 0 16px 40px; }
@@ -231,22 +240,16 @@ a:hover { color: var(--accent); }
   </div>
 
   <div class="tags">
-    <a href="/categories/ai-writing/" class="tag">AI Writing</a>
-    <a href="/categories/ai-image/" class="tag">AI Image</a>
-    <a href="/categories/ai-coding/" class="tag">AI Coding</a>
-    <a href="/categories/productivity/" class="tag">Productivity</a>
-    <a href="/categories/ai-video/" class="tag">AI Video</a>
-    <a href="/categories/free-tools/" class="tag">Free Tools</a>
+    <a href="#ai-comparison" class="tag" onclick="scrollToCategory('ai-comparison')">AI Comparison</a>
+    <a href="#ai-design" class="tag" onclick="scrollToCategory('ai-design')">AI Design</a>
+    <a href="#ai-image" class="tag" onclick="scrollToCategory('ai-image')">AI Image</a>
+    <a href="#ai-coding" class="tag" onclick="scrollToCategory('ai-coding')">AI Coding</a>
+    <a href="#productivity" class="tag" onclick="scrollToCategory('productivity')">Productivity</a>
+    <a href="#ai-video" class="tag" onclick="scrollToCategory('ai-video')">AI Video</a>
+    <a href="#free-tools" class="tag" onclick="scrollToCategory('free-tools')">Free Tools</a>
   </div>
 
-  <div style="display:flex;align-items:baseline;justify-content:space-between;margin-top:40px"><h2 class="section-title" style="margin:0">By Category</h2><a href="/articles-list.html" style="font-size:0.82em;color:var(--text-tertiary)">View all 20 articles →</a></div>
-
-    
-    <h3 class="section-title" id="productivity">Productivity</h3>
-    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-top:0">
-  <h2 class="section-title" style="margin:0">Latest Reviews</h2>
-  <a href="/articles-list.html" style="font-size:0.82em;color:var(--text-tertiary)">View all 29 articles →</a>
-</div>
+  <div style="display:flex;align-items:baseline;justify-content:space-between;margin-top:40px;margin-bottom:20px"><h2 class="section-title" style="margin:0">Latest Reviews</h2><a href="/articles-list.html" style="font-size:0.82em;color:var(--text-tertiary)">View all 29 articles →</a></div>
 
 <div class="article-list">
       <a href="/articles/ai-coding-agents-vs-human-developers-2026.html" class="article-card">
@@ -441,219 +444,7 @@ a:hover { color: var(--accent); }
     </div>
   </div>
 
-        <h3>Best AI Meeting Summarizers in 2026: Never Take Notes Again</h3>
-      </a>
-      <a href="/articles/best-ai-note-taking-tools-2026.html" class="article-card">
-        <div class="article-meta"><span>May 12, 2026</span></div>
-        <h3>Best AI Note-Taking Tools in 2026: Tested & Compared</h3>
-      </a>
-      <a href="/articles/best-ai-presentation-makers-2026.html" class="article-card">
-        <div class="article-meta"><span>May 12, 2026</span></div>
-        <h3>Best AI Presentation Makers in 2026: Tested & Compared</h3>
-      </a>
-      <a href="/articles/best-ai-productivity-tools-2026.html" class="article-card">
-        <div class="article-meta"><span>May 12, 2026</span></div>
-        <h3>Best AI Productivity Tools in 2026: 10 Tools We Actually Use</h3>
-      </a>
-    </div>
-
-    <h3 class="section-title" id="ai-design">AI Design</h3>
-    <div class="article-list">
-      <a href="/articles/best-ai-design-tools-2026.html" class="article-card">
-        <div class="article-meta"><span>May 12, 2026</span></div>
-        <h3>Best AI Design Tools in 2026: Canva, Galileo & Beyond</h3>
-      </a>
-      <a href="/articles/best-ai-logo-makers-2026.html" class="article-card">
-        <div class="article-meta"><span>May 12, 2026</span></div>
-        <h3>Best AI Logo Makers in 2026: Design a Logo in Minutes</h3>
-      </a>
-    </div>
-
-    <h3 class="section-title" id="ai-image">AI Image</h3>
-    <div class="article-list">
-      <a href="/articles/best-ai-headshot-generators-2026.html" class="article-card">
-        <div class="article-meta"><span>May 12, 2026</span></div>
-        <h3>Best AI Headshot Generators in 2026: Professional Photos Without a Studio</h3>
-      </a>
-      <a href="/articles/best-ai-image-generators-2026.html" class="article-card">
-        <div class="article-meta"><span>May 12, 2026</span></div>
-        <h3>Best AI Image Generators in 2026: Midjourney vs DALL-E 3 vs Stable Diffusion</h3>
-      </a>
-    </div>
-
-    <h3 class="section-title" id="guides">Guides</h3>
-    <div class="article-list">
-      <a href="/articles/ai-tools-buying-guide-2026.html" class="article-card">
-        <div class="article-meta"><span>May 12, 2026</span></div>
-        <h3>AI Tools Buying Guide 2026: How to Choose the Right AI Tool</h3>
-      </a>
-    </div>
-
-    <h3 class="section-title" id="ai-coding">AI Coding</h3>
-    <div class="article-list">
-      <a href="/articles/best-ai-coding-assistants-2026.html" class="article-card">
-        <div class="article-meta"><span>May 12, 2026</span></div>
-        <h3>Best AI Coding Assistants in 2026: Copilot vs Cursor vs Claude</h3>
-      </a>
-    </div>
-
-    <h3 class="section-title" id="data-analysis">Data Analysis</h3>
-    <div class="article-list">
-      <a href="/articles/best-ai-data-analysis-tools-2026.html" class="article-card">
-        <div class="article-meta"><span>May 12, 2026</span></div>
-        <h3>Best AI Data Analysis Tools in 2026: From Spreadsheets to Insights</h3>
-      </a>
-    </div>
-
-    <h3 class="section-title" id="ai-music">AI Music</h3>
-    <div class="article-list">
-      <a href="/articles/best-ai-music-generators-2026.html" class="article-card">
-        <div class="article-meta"><span>May 12, 2026</span></div>
-        <h3>Best AI Music Generators in 2026: Create Original Music with AI</h3>
-      </a>
-    </div>
-
-    <h3 class="section-title" id="ai-seo">AI SEO</h3>
-    <div class="article-list">
-      <a href="/articles/best-ai-seo-tools-2026.html" class="article-card">
-        <div class="article-meta"><span>May 12, 2026</span></div>
-        <h3>Best AI SEO Tools in 2026: Ranked & Reviewed</h3>
-      </a>
-    </div>
-
-    <h3 class="section-title" id="social-media">Social Media</h3>
-    <div class="article-list">
-      <a href="/articles/best-ai-social-media-tools-2026.html" class="article-card">
-        <div class="article-meta"><span>May 12, 2026</span></div>
-        <h3>Best AI Social Media Tools in 2026: Ranked & Reviewed</h3>
-      </a>
-    </div>
-
-    <h3 class="section-title" id="ai-productivity">AI Productivity</h3>
-    <div class="article-list">
-      <a href="/articles/best-ai-translation-tools-2026.html" class="article-card">
-        <div class="article-meta"><span>May 12, 2026</span></div>
-        <h3>Best AI Translation Tools in 2026: DeepL, Google Translate & More</h3>
-      </a>
-    </div>
-
-    <h3 class="section-title" id="ai-video">AI Video</h3>
-    <div class="article-list">
-      <a href="/articles/best-ai-video-generators-2026.html" class="article-card">
-        <div class="article-meta"><span>May 12, 2026</span></div>
-        <h3>Best AI Video Generators in 2026: Ranked & Reviewed</h3>
-      </a>
-    </div>
-
-    <h3 class="section-title" id="ai-voice">AI Voice</h3>
-    <div class="article-list">
-      <a href="/articles/best-ai-voice-generators-2026.html" class="article-card">
-        <div class="article-meta"><span>May 12, 2026</span></div>
-        <h3>Best AI Voice Generators in 2026: ElevenLabs, PlayHT & More</h3>
-      </a>
-    </div>
-
-    <h3 class="section-title" id="free-tools">Free Tools</h3>
-    <div class="article-list">
-      <a href="/articles/best-free-ai-tools-2026.html" class="article-card">
-        <div class="article-meta"><span>May 12, 2026</span></div>
-        <h3>Best Free AI Tools in 2026: Actually Useful, No Paywalls</h3>
-      </a>
-    </div>
-
-    <h3 class="section-title" id="ai-comparison">AI Comparison</h3>
-    <div class="article-list">
-      <a href="/articles/chatgpt-vs-claude-vs-gemini-2026.html" class="article-card">
-        <div class="article-meta"><span>May 12, 2026</span></div>
-        <h3>ChatGPT vs Claude vs Gemini 2026: Which AI Assistant Wins?</h3>
-      </a>
-    </div>
-
-      <h3>Best AI Coding Assistants in 2026: Copilot vs Cursor vs Claude</h3>
-    </a>
-    <a href="/articles/best-ai-data-analysis-tools-2026.html" class="article-card">
-      <div class="article-meta"><span class="article-category">Data Analysis</span><span>May 12, 2026</span></div>
-      <h3>Best AI Data Analysis Tools in 2026: From Spreadsheets to Insights</h3>
-    </a>
-    <a href="/articles/best-ai-design-tools-2026.html" class="article-card">
-      <div class="article-meta"><span class="article-category">AI Design</span><span>May 12, 2026</span></div>
-      <h3>Best AI Design Tools in 2026: Canva, Galileo & Beyond</h3>
-    </a>
-    <a href="/articles/best-ai-email-assistants-2026.html" class="article-card">
-      <div class="article-meta"><span class="article-category">Productivity</span><span>May 12, 2026</span></div>
-      <h3>Best AI Email Assistants in 2026: Write Better Emails Faster</h3>
-    </a>
-    <a href="/articles/best-ai-headshot-generators-2026.html" class="article-card">
-      <div class="article-meta"><span class="article-category">AI Image</span><span>May 12, 2026</span></div>
-      <h3>Best AI Headshot Generators in 2026: Professional Photos Without a Studio</h3>
-    </a>
-    <a href="/articles/best-ai-image-generators-2026.html" class="article-card">
-      <div class="article-meta"><span class="article-category">AI Image</span><span>May 12, 2026</span></div>
-      <h3>Best AI Image Generators in 2026: Midjourney vs DALL-E 3 vs Stable Diffusion</h3>
-    </a>
-    <a href="/articles/best-ai-logo-makers-2026.html" class="article-card">
-      <div class="article-meta"><span class="article-category">AI Design</span><span>May 12, 2026</span></div>
-      <h3>Best AI Logo Makers in 2026: Design a Logo in Minutes</h3>
-    </a>
-    <a href="/articles/best-ai-meeting-summarizers-2026.html" class="article-card">
-      <div class="article-meta"><span class="article-category">Productivity</span><span>May 12, 2026</span></div>
-      <h3>Best AI Meeting Summarizers in 2026: Never Take Notes Again</h3>
-    </a>
-    <a href="/articles/best-ai-music-generators-2026.html" class="article-card">
-      <div class="article-meta"><span class="article-category">AI Music</span><span>May 12, 2026</span></div>
-      <h3>Best AI Music Generators in 2026: Create Original Music with AI</h3>
-    </a>
-    <a href="/articles/best-ai-note-taking-tools-2026.html" class="article-card">
-      <div class="article-meta"><span class="article-category">Productivity</span><span>May 12, 2026</span></div>
-      <h3>Best AI Note-Taking Tools in 2026: Tested & Compared</h3>
-    </a>
-    <a href="/articles/best-ai-presentation-makers-2026.html" class="article-card">
-      <div class="article-meta"><span class="article-category">Productivity</span><span>May 12, 2026</span></div>
-      <h3>Best AI Presentation Makers in 2026: Tested & Compared</h3>
-    </a>
-    <a href="/articles/best-ai-productivity-tools-2026.html" class="article-card">
-      <div class="article-meta"><span class="article-category">Productivity</span><span>May 12, 2026</span></div>
-      <h3>Best AI Productivity Tools in 2026: 10 Tools We Actually Use</h3>
-    </a>
-    <a href="/articles/best-ai-seo-tools-2026.html" class="article-card">
-      <div class="article-meta"><span class="article-category">AI SEO</span><span>May 12, 2026</span></div>
-      <h3>Best AI SEO Tools in 2026: Ranked & Reviewed</h3>
-    </a>
-    <a href="/articles/best-ai-social-media-tools-2026.html" class="article-card">
-      <div class="article-meta"><span class="article-category">Social Media</span><span>May 12, 2026</span></div>
-      <h3>Best AI Social Media Tools in 2026: Ranked & Reviewed</h3>
-    </a>
-    <a href="/articles/best-ai-translation-tools-2026.html" class="article-card">
-      <div class="article-meta"><span class="article-category">AI Productivity</span><span>May 12, 2026</span></div>
-      <h3>Best AI Translation Tools in 2026: DeepL, Google Translate & More</h3>
-    </a>
-    <a href="/articles/best-ai-video-generators-2026.html" class="article-card">
-      <div class="article-meta"><span class="article-category">AI Video</span><span>May 12, 2026</span></div>
-      <h3>Best AI Video Generators in 2026: Ranked & Reviewed</h3>
-    </a>
-    <a href="/articles/best-ai-voice-generators-2026.html" class="article-card">
-      <div class="article-meta"><span class="article-category">AI Voice</span><span>May 12, 2026</span></div>
-      <h3>Best AI Voice Generators in 2026: ElevenLabs, PlayHT & More</h3>
-    </a>
-    <a href="/articles/best-free-ai-tools-2026.html" class="article-card">
-      <div class="article-meta"><span class="article-category">Free Tools</span><span>May 12, 2026</span></div>
-      <h3>Best Free AI Tools in 2026: Actually Useful, No Paywalls</h3>
-    </a>
-    <a href="/articles/chatgpt-vs-claude-vs-gemini-2026.html" class="article-card">
-      <div class="article-meta"><span class="article-category">AI Comparison</span><span>May 12, 2026</span></div>
-      <h3>ChatGPT vs Claude vs Gemini 2026: Which AI Assistant Wins?</h3>
-    </a>
-  </div>
-      <h3>Best AI Presentation Makers in 2026: Tested & Compared</h3>
-      <p>We tested 12 AI presentation tools including Gamma, Beautiful.ai, Canva, Plus AI, and Copilot.</p>
-    </a>
-    <a href="/articles/best-ai-writing-tools-2025.html" class="article-card">
-      <div class="article-meta"><span class="article-category">AI Writing</span><span>May 10, 2026</span></div>
-      <h3>Best AI Writing Tools in 2026: Tested & Compared</h3>
-      <p>Hands-on testing of ChatGPT, Jasper, Claude, and more.</p>
-    </a>
-  </div>
-
+  
   <div class="ad-slot">
     <span class="ad-label">Sponsor</span>
     <span class="ad-placeholder">Native ad placement</span>
@@ -704,6 +495,17 @@ input.addEventListener('input', function() {
     `<a href="${a.url}" style="display:block;padding:8px 12px;color:var(--text-secondary);text-decoration:none;border-bottom:1px solid var(--border);font-size:0.88em;text-align:left"><span style="color:var(--accent);font-size:0.78em">${a.cat}</span> ${a.title}</a>`
   ).join('');
 });
+
+// Mobile nav toggle
+document.querySelector('.nav-toggle').addEventListener('click', function() {
+  document.querySelector('.nav-cats').classList.toggle('show');
+});
+
+// Category scroll on homepage
+function scrollToCategory(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
 </script>
 
 <!-- 热门话题自动滚动 -->
