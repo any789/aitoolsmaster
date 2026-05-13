@@ -107,10 +107,75 @@ td{padding:12px 16px;border-bottom:1px solid var(--border);color:var(--text-seco
   <div class="card" style="text-align:center;padding:40px">
     <p style="margin-bottom:16px">Buy API credits instantly via Telegram Bot. No need to wait.</p>
     <a href="https://t.me/CheapAIApiBot" target="_blank" style="display:inline-block;padding:14px 40px;background:var(--accent);color:#000;border-radius:8px;font-weight:600;font-size:1.1em;margin-bottom:20px">Open Telegram Bot →</a>
-    <p style="font-size:0.82em;color:var(--text-tertiary)">Or email us: <span style="color:var(--accent)">78995936@qq.com</span></p>
   </div>
 </div>
 </main>
 <footer class="footer"><p>&copy; 2026 AI Tools Master. <a href="https://topaitools.vip">topaitools.vip</a></p></footer>
+<style>
+.chat-btn {
+  position: fixed; bottom: 24px; right: 24px; z-index: 9999;
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--accent); border: none; color: #000;
+  font-size: 24px; cursor: pointer; box-shadow: 0 4px 20px rgba(255,107,53,0.4);
+  transition: transform 0.2s;
+}
+.chat-btn:hover { transform: scale(1.1); }
+.chat-box {
+  position: fixed; bottom: 92px; right: 24px; z-index: 9998;
+  width: 360px; max-height: 520px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+  display: none; flex-direction: column; overflow: hidden;
+}
+.chat-header { padding: 16px 20px; border-bottom: 1px solid var(--border); font-weight: 600; font-size: 0.95em; display: flex; justify-content: space-between; align-items: center; }
+.chat-close { cursor: pointer; font-size: 1.2em; color: var(--text-tertiary); }
+.chat-close:hover { color: var(--text); }
+.chat-msgs { flex: 1; overflow-y: auto; padding: 16px 20px; display: flex; flex-direction: column; gap: 10px; min-height: 240px; max-height: 340px; }
+.chat-msg { padding: 10px 14px; border-radius: 12px; max-width: 85%; font-size: 0.85em; line-height: 1.5; }
+.chat-msg.bot { background: var(--bg-card-hover); border: 1px solid var(--border); align-self: flex-start; color: var(--text); border-bottom-left-radius: 4px; }
+.chat-msg.user { background: var(--accent); color: #000; align-self: flex-end; border-bottom-right-radius: 4px; }
+.chat-input-area { display: flex; gap: 8px; padding: 12px 16px; border-top: 1px solid var(--border); }
+.chat-input { flex: 1; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg); color: var(--text); font-size: 0.85em; font-family: var(--font); outline: none; }
+.chat-input:focus { border-color: var(--accent); }
+.chat-send { padding: 10px 18px; border-radius: 8px; background: var(--accent); border: none; color: #000; font-weight: 600; font-size: 0.85em; cursor: pointer; }
+.chat-send:disabled { opacity: 0.5; cursor: not-allowed; }
+.chat-loading { color: var(--text-tertiary); font-size: 0.8em; padding: 8px 14px; }
+@media(max-width:480px){ .chat-box { width: calc(100vw - 32px); right: 16px; bottom: 88px; } .chat-btn { right: 16px; bottom: 20px; } }
+</style>
+<button class="chat-btn" id="chat-btn" onclick="toggleChat()">💬</button>
+<div class="chat-box" id="chat-box">
+  <div class="chat-header"><span>🤖 AI Assistant</span><span class="chat-close" onclick="toggleChat()">✕</span></div>
+  <div class="chat-msgs" id="chat-msgs">
+    <div class="chat-msg bot">Hi! 👋 I'm the AI assistant for Cheap AI API. Ask me about pricing, how to buy, or API integration!</div>
+  </div>
+  <div class="chat-input-area">
+    <input class="chat-input" id="chat-input" placeholder="Type your question..." onkeydown="if(event.key==='Enter') sendMsg()">
+    <button class="chat-send" id="chat-send" onclick="sendMsg()">Send</button>
+  </div>
+</div>
+<script>
+const CHATBOT_URL = 'https://ai-chatbot.78995936.workers.dev';
+let chatHistory = [];
+let emailCollected = false;
+function toggleChat() { const box=document.getElementById('chat-box'); const btn=document.getElementById('chat-btn'); const isOpen=box.style.display==='flex'; box.style.display=isOpen?'none':'flex'; btn.textContent=isOpen?'💬':'✕'; if(!isOpen) document.getElementById('chat-input').focus(); }
+function addMsg(text,role){ const msgs=document.getElementById('chat-msgs'); const div=document.createElement('div'); div.className='chat-msg '+role; div.textContent=text; msgs.appendChild(div); msgs.scrollTop=msgs.scrollHeight; }
+function showLoading(){ const msgs=document.getElementById('chat-msgs'); const div=document.createElement('div'); div.className='chat-loading'; div.id='chat-loading'; div.textContent='Thinking...'; msgs.appendChild(div); msgs.scrollTop=msgs.scrollHeight; }
+function hideLoading(){ const el=document.getElementById('chat-loading'); if(el) el.remove(); }
+async function sendMsg(){
+  const input=document.getElementById('chat-input'); const sendBtn=document.getElementById('chat-send'); const msg=input.value.trim(); if(!msg) return;
+  input.value=''; sendBtn.disabled=true; addMsg(msg,'user'); chatHistory.push({role:'user',content:msg}); showLoading();
+  try {
+    const res=await fetch(CHATBOT_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,history:chatHistory})});
+    const data=await res.json(); hideLoading();
+    if(data.reply){
+      addMsg(data.reply,'bot'); chatHistory.push({role:'assistant',content:data.reply});
+      if(!emailCollected&&(data.reply.toLowerCase().includes('email')||data.reply.includes('@'))){
+        setTimeout(()=>{ const email=prompt('Please enter your email so we can follow up:'); if(email&&email.includes('@')){ emailCollected=true; addMsg(email,'user'); chatHistory.push({role:'user',content:email}); fetch(CHATBOT_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:email,history:chatHistory,email:email})}); }},500);
+      }
+    } else { addMsg('Sorry, something went wrong. Please try again.','bot'); }
+  } catch(e){ hideLoading(); addMsg('Sorry, I cannot connect right now. Please try again later.','bot'); }
+  sendBtn.disabled=false; document.getElementById('chat-input').focus();
+}
+</script>
 </body>
 </html>
