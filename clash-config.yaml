@@ -64,7 +64,7 @@ proxies:
       path: /
       headers:
         Host: "sni.111000.v6.navy"
-  - name: "_CN_中国->_IT_意大利"
+  - name: "_CN_中国->_IT_意大利-2"
     type: vless
     server: 222.167.202.60
     port: 7443
@@ -92,7 +92,7 @@ proxies:
       path: /
       headers:
         Host: "sni.111000.v6.navy"
-  - name: "_CN_中国->_US_美国"
+  - name: "_CN_中国->_US_美国-2"
     type: vless
     server: 222.167.202.3
     port: 7443
@@ -122,7 +122,7 @@ proxies:
       path: /kbjc/us1
       headers:
         Host: "us1-us1.aiopen.sbs"
-  - name: "_CN_中国->_IT_意大利"
+  - name: "_CN_中国->_IT_意大利-3"
     type: vless
     server: 222.167.202.21
     port: 7443
@@ -137,7 +137,7 @@ proxies:
       path: /222.167.202.21:7443
       headers:
         Host: "2026.hhhhh.eu.org"
-  - name: "_CN_中国->_IT_意大利"
+  - name: "_CN_中国->_IT_意大利-4"
     type: vless
     server: 222.167.202.70
     port: 7443
@@ -151,7 +151,7 @@ proxies:
       path: /222.167.202.70:7443
       headers:
         Host: "2026.hhhhh.eu.org"
-  - name: "_CN_中国->_US_美国"
+  - name: "_CN_中国->_US_美国-3"
     type: vless
     server: 222.167.202.23
     port: 7443
@@ -165,7 +165,7 @@ proxies:
       path: /222.167.202.23:7443
       headers:
         Host: "2026.hhhhh.eu.org"
-  - name: "_CN_中国->_US_美国"
+  - name: "_CN_中国->_US_美国-4"
     type: vless
     server: 222.167.202.50
     port: 7443
@@ -180,7 +180,7 @@ proxies:
       path: /222.167.202.50:7443
       headers:
         Host: "2026.hhhhh.eu.org"
-  - name: "_CN_中国->_IT_意大利"
+  - name: "_CN_中国->_IT_意大利-5"
     type: vless
     server: 222.167.202.35
     port: 7443
@@ -208,7 +208,7 @@ proxies:
       path: /
       headers:
         Host: "sni.111000.v6.navy"
-  - name: "_CN_中国->_IT_意大利"
+  - name: "_CN_中国->_IT_意大利-6"
     type: vless
     server: 222.167.202.36
     port: 7443
@@ -222,7 +222,7 @@ proxies:
       path: /222.167.202.36:7443
       headers:
         Host: "2026.hhhhh.eu.org"
-  - name: "_CN_中国->_US_美国"
+  - name: "_CN_中国->_US_美国-5"
     type: vless
     server: 222.167.202.22
     port: 7443
@@ -236,7 +236,7 @@ proxies:
       path: /222.167.202.22:7443
       headers:
         Host: "2026.hhhhh.eu.org"
-  - name: "_CN_中国->_IT_意大利"
+  - name: "_CN_中国->_IT_意大利-7"
     type: vless
     server: 222.167.202.4
     port: 7443
@@ -251,7 +251,7 @@ proxies:
       path: /222.167.202.4:7443
       headers:
         Host: "2026.hhhhh.eu.org"
-  - name: "_CN_中国->_IT_意大利"
+  - name: "_CN_中国->_IT_意大利-8"
     type: vless
     server: 222.167.202.52
     port: 7443
@@ -266,7 +266,7 @@ proxies:
       path: /222.167.202.52:7443
       headers:
         Host: "2026.hhhhh.eu.org"
-  - name: "_CN_中国->_US_美国"
+  - name: "_CN_中国->_US_美国-6"
     type: vless
     server: 222.167.202.33
     port: 7443
@@ -280,7 +280,7 @@ proxies:
       path: /222.167.202.33:7443
       headers:
         Host: "2026.hhhhh.eu.org"
-  - name: "_US_美国"
+  - name: "_US_美国-2"
     type: vless
     server: 156.229.161.107
     port: 10001
@@ -295,7 +295,7 @@ proxies:
     reality-opts:
       public-key: 4jNz4Bw-FZlaX-WtfAdwK0hegY28W_k8AttGd-7hZn4
       short-id: fb2c6678
-  - name: "_CN_中国->_US_美国"
+  - name: "_CN_中国->_US_美国-7"
     type: vless
     server: 222.167.202.10
     port: 7443
@@ -310,7 +310,7 @@ proxies:
       path: /222.167.202.10:7443
       headers:
         Host: "2026.hhhhh.eu.org"
-  - name: "_CN_中国->_US_美国"
+  - name: "_CN_中国->_US_美国-8"
     type: vless
     server: 222.167.202.16
     port: 7443
@@ -364,24 +364,24 @@ proxy-groups:
       - "_CN_中国->_US_美国"
       - "_CH_瑞士"
       - "_DE_德国"
-      - "_CN_中国->_IT_意大利"
+      - "_CN_中国->_IT_意大利-2"
       - "_IR_伊朗->_LT_立陶宛"
-      - "_CN_中国->_US_美国"
+      - "_CN_中国->_US_美国-2"
       - "_US_美国"
-      - "_CN_中国->_IT_意大利"
-      - "_CN_中国->_IT_意大利"
-      - "_CN_中国->_US_美国"
-      - "_CN_中国->_US_美国"
-      - "_CN_中国->_IT_意大利"
+      - "_CN_中国->_IT_意大利-3"
+      - "_CN_中国->_IT_意大利-4"
+      - "_CN_中国->_US_美国-3"
+      - "_CN_中国->_US_美国-4"
+      - "_CN_中国->_IT_意大利-5"
       - "_FR_法国"
-      - "_CN_中国->_IT_意大利"
-      - "_CN_中国->_US_美国"
-      - "_CN_中国->_IT_意大利"
-      - "_CN_中国->_IT_意大利"
-      - "_CN_中国->_US_美国"
-      - "_US_美国"
-      - "_CN_中国->_US_美国"
-      - "_CN_中国->_US_美国"
+      - "_CN_中国->_IT_意大利-6"
+      - "_CN_中国->_US_美国-5"
+      - "_CN_中国->_IT_意大利-7"
+      - "_CN_中国->_IT_意大利-8"
+      - "_CN_中国->_US_美国-6"
+      - "_US_美国-2"
+      - "_CN_中国->_US_美国-7"
+      - "_CN_中国->_US_美国-8"
       - "_US_美国->_LT_立陶宛"
       - "_GB_英国->_NL_荷兰"
     url: http://www.gstatic.com/generate_204
