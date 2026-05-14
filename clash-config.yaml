@@ -1,21 +1,11 @@
-# Clash Verge Config - Free Nodes
-mode: rule
-mixed-port: 7897
-allow-lan: false
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
 log-level: info
-ipv6: true
-unified-delay: true
-tun:
-  enable: false
-  stack: gvisor
-  auto-route: true
-  strict-route: false
-  auto-detect-interface: true
-  dns-hijack:
-    - any:53
 
 proxies:
-  - name: "🇨🇳_CN_中国->🇮🇹_IT_意大利"
+  - name: "_CN_中国->_IT_意大利"
     type: vless
     server: 222.167.202.32
     port: 7443
@@ -30,7 +20,7 @@ proxies:
       path: /222.167.202.32:7443
       headers:
         Host: "2026.hhhhh.eu.org"
-  - name: "🇨🇳_CN_中国->🇺🇸_US_美国"
+  - name: "_CN_中国->_US_美国"
     type: vless
     server: 222.167.202.47
     port: 7443
@@ -44,7 +34,7 @@ proxies:
       path: /222.167.202.47:7443
       headers:
         Host: "2026.hhhhh.eu.org"
-  - name: "🇨🇭_CH_瑞士"
+  - name: "_CH_瑞士"
     type: vless
     server: nl1.samovargate.com
     port: 443
@@ -59,7 +49,7 @@ proxies:
     reality-opts:
       public-key: gwuAehnMX6e-n1fxIenfjx43j3qXXi7Cb4wfnW5VyBQ
       short-id: f04729f65b9ea261
-  - name: "🇩🇪_DE_德国"
+  - name: "_DE_德国"
     type: vless
     server: 89.58.40.177
     port: 8443
@@ -74,7 +64,7 @@ proxies:
       path: /
       headers:
         Host: "sni.111000.v6.navy"
-  - name: "🇨🇳_CN_中国->🇮🇹_IT_意大利"
+  - name: "_CN_中国->_IT_意大利"
     type: vless
     server: 222.167.202.60
     port: 7443
@@ -88,7 +78,7 @@ proxies:
       path: /222.167.202.60:7443
       headers:
         Host: "2026.hhhhh.eu.org"
-  - name: "🇮🇷_IR_伊朗->🇱🇹_LT_立陶宛"
+  - name: "_IR_伊朗->_LT_立陶宛"
     type: vless
     server: 5.34.209.231
     port: 8443
@@ -102,7 +92,7 @@ proxies:
       path: /
       headers:
         Host: "sni.111000.v6.navy"
-  - name: "🇨🇳_CN_中国->🇺🇸_US_美国"
+  - name: "_CN_中国->_US_美国"
     type: vless
     server: 222.167.202.3
     port: 7443
@@ -117,7 +107,7 @@ proxies:
       path: /222.167.202.3:7443
       headers:
         Host: "2026.hhhhh.eu.org"
-  - name: "🇺🇸_US_美国"
+  - name: "_US_美国"
     type: vless
     server: 104.19.58.118
     port: 443
@@ -132,7 +122,7 @@ proxies:
       path: /kbjc/us1
       headers:
         Host: "us1-us1.aiopen.sbs"
-  - name: "🇨🇳_CN_中国->🇮🇹_IT_意大利"
+  - name: "_CN_中国->_IT_意大利"
     type: vless
     server: 222.167.202.21
     port: 7443
@@ -147,7 +137,7 @@ proxies:
       path: /222.167.202.21:7443
       headers:
         Host: "2026.hhhhh.eu.org"
-  - name: "🇨🇳_CN_中国->🇮🇹_IT_意大利"
+  - name: "_CN_中国->_IT_意大利"
     type: vless
     server: 222.167.202.70
     port: 7443
@@ -161,7 +151,7 @@ proxies:
       path: /222.167.202.70:7443
       headers:
         Host: "2026.hhhhh.eu.org"
-  - name: "🇨🇳_CN_中国->🇺🇸_US_美国"
+  - name: "_CN_中国->_US_美国"
     type: vless
     server: 222.167.202.23
     port: 7443
@@ -175,7 +165,7 @@ proxies:
       path: /222.167.202.23:7443
       headers:
         Host: "2026.hhhhh.eu.org"
-  - name: "🇨🇳_CN_中国->🇺🇸_US_美国"
+  - name: "_CN_中国->_US_美国"
     type: vless
     server: 222.167.202.50
     port: 7443
@@ -190,7 +180,7 @@ proxies:
       path: /222.167.202.50:7443
       headers:
         Host: "2026.hhhhh.eu.org"
-  - name: "🇨🇳_CN_中国->🇮🇹_IT_意大利"
+  - name: "_CN_中国->_IT_意大利"
     type: vless
     server: 222.167.202.35
     port: 7443
@@ -204,7 +194,7 @@ proxies:
       path: /222.167.202.35:7443
       headers:
         Host: "2026.hhhhh.eu.org"
-  - name: "🇫🇷_FR_法国"
+  - name: "_FR_法国"
     type: vless
     server: 146.59.230.8
     port: 8443
@@ -218,7 +208,7 @@ proxies:
       path: /
       headers:
         Host: "sni.111000.v6.navy"
-  - name: "🇨🇳_CN_中国->🇮🇹_IT_意大利"
+  - name: "_CN_中国->_IT_意大利"
     type: vless
     server: 222.167.202.36
     port: 7443
@@ -232,7 +222,7 @@ proxies:
       path: /222.167.202.36:7443
       headers:
         Host: "2026.hhhhh.eu.org"
-  - name: "🇨🇳_CN_中国->🇺🇸_US_美国"
+  - name: "_CN_中国->_US_美国"
     type: vless
     server: 222.167.202.22
     port: 7443
@@ -246,7 +236,7 @@ proxies:
       path: /222.167.202.22:7443
       headers:
         Host: "2026.hhhhh.eu.org"
-  - name: "🇨🇳_CN_中国->🇮🇹_IT_意大利"
+  - name: "_CN_中国->_IT_意大利"
     type: vless
     server: 222.167.202.4
     port: 7443
@@ -261,7 +251,7 @@ proxies:
       path: /222.167.202.4:7443
       headers:
         Host: "2026.hhhhh.eu.org"
-  - name: "🇨🇳_CN_中国->🇮🇹_IT_意大利"
+  - name: "_CN_中国->_IT_意大利"
     type: vless
     server: 222.167.202.52
     port: 7443
@@ -276,7 +266,7 @@ proxies:
       path: /222.167.202.52:7443
       headers:
         Host: "2026.hhhhh.eu.org"
-  - name: "🇨🇳_CN_中国->🇺🇸_US_美国"
+  - name: "_CN_中国->_US_美国"
     type: vless
     server: 222.167.202.33
     port: 7443
@@ -290,7 +280,7 @@ proxies:
       path: /222.167.202.33:7443
       headers:
         Host: "2026.hhhhh.eu.org"
-  - name: "🇺🇸_US_美国"
+  - name: "_US_美国"
     type: vless
     server: 156.229.161.107
     port: 10001
@@ -305,7 +295,7 @@ proxies:
     reality-opts:
       public-key: 4jNz4Bw-FZlaX-WtfAdwK0hegY28W_k8AttGd-7hZn4
       short-id: fb2c6678
-  - name: "🇨🇳_CN_中国->🇺🇸_US_美国"
+  - name: "_CN_中国->_US_美国"
     type: vless
     server: 222.167.202.10
     port: 7443
@@ -320,7 +310,7 @@ proxies:
       path: /222.167.202.10:7443
       headers:
         Host: "2026.hhhhh.eu.org"
-  - name: "🇨🇳_CN_中国->🇺🇸_US_美国"
+  - name: "_CN_中国->_US_美国"
     type: vless
     server: 222.167.202.16
     port: 7443
@@ -335,7 +325,7 @@ proxies:
       path: /222.167.202.16:7443
       headers:
         Host: "2026.hhhhh.eu.org"
-  - name: "🇺🇸_US_美国->🇱🇹_LT_立陶宛"
+  - name: "_US_美国->_LT_立陶宛"
     type: vless
     server: 45.43.76.184
     port: 2053
@@ -350,7 +340,7 @@ proxies:
       path: /?ed=2560
       headers:
         Host: "sni.111000.v6.navy"
-  - name: "🇬🇧_GB_英国->🇳🇱_NL_荷兰"
+  - name: "_GB_英国->_NL_荷兰"
     type: vless
     server: 91.84.101.164
     port: 8443
@@ -370,30 +360,30 @@ proxy-groups:
   - name: "Auto"
     type: url-test
     proxies:
-      - "🇨🇳_CN_中国->🇮🇹_IT_意大利"
-      - "🇨🇳_CN_中国->🇺🇸_US_美国"
-      - "🇨🇭_CH_瑞士"
-      - "🇩🇪_DE_德国"
-      - "🇨🇳_CN_中国->🇮🇹_IT_意大利"
-      - "🇮🇷_IR_伊朗->🇱🇹_LT_立陶宛"
-      - "🇨🇳_CN_中国->🇺🇸_US_美国"
-      - "🇺🇸_US_美国"
-      - "🇨🇳_CN_中国->🇮🇹_IT_意大利"
-      - "🇨🇳_CN_中国->🇮🇹_IT_意大利"
-      - "🇨🇳_CN_中国->🇺🇸_US_美国"
-      - "🇨🇳_CN_中国->🇺🇸_US_美国"
-      - "🇨🇳_CN_中国->🇮🇹_IT_意大利"
-      - "🇫🇷_FR_法国"
-      - "🇨🇳_CN_中国->🇮🇹_IT_意大利"
-      - "🇨🇳_CN_中国->🇺🇸_US_美国"
-      - "🇨🇳_CN_中国->🇮🇹_IT_意大利"
-      - "🇨🇳_CN_中国->🇮🇹_IT_意大利"
-      - "🇨🇳_CN_中国->🇺🇸_US_美国"
-      - "🇺🇸_US_美国"
-      - "🇨🇳_CN_中国->🇺🇸_US_美国"
-      - "🇨🇳_CN_中国->🇺🇸_US_美国"
-      - "🇺🇸_US_美国->🇱🇹_LT_立陶宛"
-      - "🇬🇧_GB_英国->🇳🇱_NL_荷兰"
+      - "_CN_中国->_IT_意大利"
+      - "_CN_中国->_US_美国"
+      - "_CH_瑞士"
+      - "_DE_德国"
+      - "_CN_中国->_IT_意大利"
+      - "_IR_伊朗->_LT_立陶宛"
+      - "_CN_中国->_US_美国"
+      - "_US_美国"
+      - "_CN_中国->_IT_意大利"
+      - "_CN_中国->_IT_意大利"
+      - "_CN_中国->_US_美国"
+      - "_CN_中国->_US_美国"
+      - "_CN_中国->_IT_意大利"
+      - "_FR_法国"
+      - "_CN_中国->_IT_意大利"
+      - "_CN_中国->_US_美国"
+      - "_CN_中国->_IT_意大利"
+      - "_CN_中国->_IT_意大利"
+      - "_CN_中国->_US_美国"
+      - "_US_美国"
+      - "_CN_中国->_US_美国"
+      - "_CN_中国->_US_美国"
+      - "_US_美国->_LT_立陶宛"
+      - "_GB_英国->_NL_荷兰"
     url: http://www.gstatic.com/generate_204
     interval: 300
 
