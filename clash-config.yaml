@@ -1,9 +1,18 @@
-port: 7890
-socks-port: 7891
-allow-lan: true
-mode: Rule
+# Clash Verge Config - Free Nodes
+mode: rule
+mixed-port: 7897
+allow-lan: false
 log-level: info
-external-controller: 127.0.0.1:9090
+ipv6: true
+unified-delay: true
+tun:
+  enable: false
+  stack: gvisor
+  auto-route: true
+  strict-route: false
+  auto-detect-interface: true
+  dns-hijack:
+    - any:53
 
 proxies:
   - name: "🇨🇳_CN_中国->🇮🇹_IT_意大利"
@@ -14,10 +23,9 @@ proxies:
     network: ws
     tls: true
     servername: 2026.hhhhh.eu.org
-    flow: 
     skip-cert-verify: true
-    client-fingerprint: chrome
     udp: true
+    client-fingerprint: chrome
     ws-opts:
       path: /222.167.202.32:7443
       headers:
@@ -30,7 +38,6 @@ proxies:
     network: ws
     tls: true
     servername: 2026.hhhhh.eu.org
-    flow: 
     skip-cert-verify: true
     udp: true
     ws-opts:
@@ -47,8 +54,8 @@ proxies:
     servername: www.microsoft.com
     flow: xtls-rprx-vision
     skip-cert-verify: true
-    client-fingerprint: chrome
     udp: true
+    client-fingerprint: chrome
     reality-opts:
       public-key: gwuAehnMX6e-n1fxIenfjx43j3qXXi7Cb4wfnW5VyBQ
       short-id: f04729f65b9ea261
@@ -60,10 +67,9 @@ proxies:
     network: ws
     tls: true
     servername: sni.111000.v6.navy
-    flow: 
     skip-cert-verify: true
-    client-fingerprint: chrome
     udp: true
+    client-fingerprint: chrome
     ws-opts:
       path: /
       headers:
@@ -76,7 +82,6 @@ proxies:
     network: ws
     tls: true
     servername: 2026.hhhhh.eu.org
-    flow: 
     skip-cert-verify: true
     udp: true
     ws-opts:
@@ -91,7 +96,6 @@ proxies:
     network: ws
     tls: true
     servername: sni.111000.v6.navy
-    flow: 
     skip-cert-verify: true
     udp: true
     ws-opts:
@@ -106,10 +110,9 @@ proxies:
     network: ws
     tls: true
     servername: 2026.hhhhh.eu.org
-    flow: 
     skip-cert-verify: true
-    client-fingerprint: chrome
     udp: true
+    client-fingerprint: chrome
     ws-opts:
       path: /222.167.202.3:7443
       headers:
@@ -122,10 +125,9 @@ proxies:
     network: ws
     tls: true
     servername: us1-us1.aiopen.sbs
-    flow: 
     skip-cert-verify: true
-    client-fingerprint: chrome
     udp: true
+    client-fingerprint: chrome
     ws-opts:
       path: /kbjc/us1
       headers:
@@ -138,10 +140,9 @@ proxies:
     network: ws
     tls: true
     servername: 2026.hhhhh.eu.org
-    flow: 
     skip-cert-verify: true
-    client-fingerprint: chrome
     udp: true
+    client-fingerprint: chrome
     ws-opts:
       path: /222.167.202.21:7443
       headers:
@@ -154,7 +155,6 @@ proxies:
     network: ws
     tls: true
     servername: 2026.hhhhh.eu.org
-    flow: 
     skip-cert-verify: true
     udp: true
     ws-opts:
@@ -169,7 +169,6 @@ proxies:
     network: ws
     tls: true
     servername: 2026.hhhhh.eu.org
-    flow: 
     skip-cert-verify: true
     udp: true
     ws-opts:
@@ -184,10 +183,9 @@ proxies:
     network: ws
     tls: true
     servername: 2026.hhhhh.eu.org
-    flow: 
     skip-cert-verify: true
-    client-fingerprint: chrome
     udp: true
+    client-fingerprint: chrome
     ws-opts:
       path: /222.167.202.50:7443
       headers:
@@ -200,7 +198,6 @@ proxies:
     network: ws
     tls: true
     servername: 2026.hhhhh.eu.org
-    flow: 
     skip-cert-verify: true
     udp: true
     ws-opts:
@@ -215,7 +212,6 @@ proxies:
     network: ws
     tls: true
     servername: sni.111000.v6.navy
-    flow: 
     skip-cert-verify: true
     udp: true
     ws-opts:
@@ -230,7 +226,6 @@ proxies:
     network: ws
     tls: true
     servername: 2026.hhhhh.eu.org
-    flow: 
     skip-cert-verify: true
     udp: true
     ws-opts:
@@ -245,7 +240,6 @@ proxies:
     network: ws
     tls: true
     servername: 2026.hhhhh.eu.org
-    flow: 
     skip-cert-verify: true
     udp: true
     ws-opts:
@@ -260,10 +254,9 @@ proxies:
     network: ws
     tls: true
     servername: 2026.hhhhh.eu.org
-    flow: 
     skip-cert-verify: true
-    client-fingerprint: chrome
     udp: true
+    client-fingerprint: chrome
     ws-opts:
       path: /222.167.202.4:7443
       headers:
@@ -276,10 +269,9 @@ proxies:
     network: ws
     tls: true
     servername: 2026.hhhhh.eu.org
-    flow: 
     skip-cert-verify: true
-    client-fingerprint: chrome
     udp: true
+    client-fingerprint: chrome
     ws-opts:
       path: /222.167.202.52:7443
       headers:
@@ -292,7 +284,6 @@ proxies:
     network: ws
     tls: true
     servername: 2026.hhhhh.eu.org
-    flow: 
     skip-cert-verify: true
     udp: true
     ws-opts:
@@ -309,8 +300,8 @@ proxies:
     servername: www.icloud.com
     flow: xtls-rprx-vision
     skip-cert-verify: true
-    client-fingerprint: chrome
     udp: true
+    client-fingerprint: chrome
     reality-opts:
       public-key: 4jNz4Bw-FZlaX-WtfAdwK0hegY28W_k8AttGd-7hZn4
       short-id: fb2c6678
@@ -322,10 +313,9 @@ proxies:
     network: ws
     tls: true
     servername: 2026.hhhhh.eu.org
-    flow: 
     skip-cert-verify: true
-    client-fingerprint: chrome
     udp: true
+    client-fingerprint: chrome
     ws-opts:
       path: /222.167.202.10:7443
       headers:
@@ -338,10 +328,9 @@ proxies:
     network: ws
     tls: true
     servername: 2026.hhhhh.eu.org
-    flow: 
     skip-cert-verify: true
-    client-fingerprint: chrome
     udp: true
+    client-fingerprint: chrome
     ws-opts:
       path: /222.167.202.16:7443
       headers:
@@ -354,10 +343,9 @@ proxies:
     network: ws
     tls: true
     servername: sni.111000.v6.navy
-    flow: 
     skip-cert-verify: true
-    client-fingerprint: chrome
     udp: true
+    client-fingerprint: chrome
     ws-opts:
       path: /?ed=2560
       headers:
@@ -370,10 +358,9 @@ proxies:
     network: ws
     tls: true
     servername: sni.111000.v6.navy
-    flow: 
     skip-cert-verify: true
-    client-fingerprint: chrome
     udp: true
+    client-fingerprint: chrome
     ws-opts:
       path: /?ed=2560
       headers:
