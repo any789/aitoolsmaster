@@ -439,14 +439,44 @@ function generatePrompt() {
   const model = document.getElementById('modelSelect').value;
   const details = document.getElementById('detailInput').value.trim();
   
-  const catData = templates[currentCat];
+  // Smart category detection based on input
+  const lower = (topic + ' ' + details).toLowerCase();
+  const catKeywords = {
+    code: ['python', 'javascript', 'code', 'function', 'program', 'script', 'debug', 'algorithm', 'api', 'web scraper', 'app', 'software', 'coding', 'html', 'css', 'java', 'react', 'node', 'database', 'sql', 'git'],
+    write: ['blog', 'article', 'essay', 'write', 'content', 'copy', 'newsletter', 'story', 'post', 'email', 'memo', 'report', 'document', 'draft'],
+    image: ['image', 'photo', 'picture', 'art', 'design', 'illustration', 'draw', 'paint', 'midjourney', 'dalle', 'generate image', 'visual', 'logo', 'poster'],
+    analysis: ['analyze', 'analysis', 'data', 'statistics', 'chart', 'metrics', 'report', 'insight', 'dashboard', 'spreadsheet', 'excel', 'csv'],
+    translate: ['translate', 'translation', 'language', 'french', 'spanish', 'chinese', 'japanese', 'arabic', 'german', 'english', 'interpret'],
+    business: ['business', 'marketing', 'sales', 'startup', 'pitch', 'strategy', 'plan', 'budget', 'revenue', 'client', 'customer', 'brand'],
+    learn: ['learn', 'study', 'explain', 'understand', 'beginner', 'tutorial', 'teach', 'lesson', 'course', 'guide', 'introduction', 'concept'],
+    creative: ['creative', 'idea', 'brainstorm', 'story', 'poem', 'song', 'script', 'fiction', 'fantasy', 'character', 'world', 'narrative']
+  };
+  
+  let detectedCat = null;
+  for (const [cat, keywords] of Object.entries(catKeywords)) {
+    for (const kw of keywords) {
+      if (lower.includes(kw)) {
+        detectedCat = cat;
+        break;
+      }
+    }
+    if (detectedCat) break;
+  }
+  
+  // Use detected category, fall back to currently selected
+  const catToUse = detectedCat || currentCat;
+  
+  // Update UI to show which category is being used
+  document.querySelectorAll('.cat-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.cat === catToUse);
+  });
+  
+  const catData = templates[catToUse];
   if (!catData) return;
   
   const prompts = catData.generate(topic || catData.name + ' task', model, details);
-  // Pick one
   const prompt = prompts[Math.floor(Math.random() * prompts.length)];
   
-  // Add model-specific prefix
   let prefix = '';
   if (model !== 'auto') {
     const modelNames = { chatgpt: 'ChatGPT', claude: 'Claude', deepseek: 'DeepSeek', gemini: 'Gemini' };
