@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="google-adsense-account" content="ca-pub-4720141167708068">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free AI Chat — Chat with DeepSeek V4-Flash | AI Tools Master</title>
-<meta name="description" content="Try our free AI chat tool powered by DeepSeek V4-Flash. Ask questions, get code help, brainstorm ideas — no login required.">
+<title>Free AI Chat — Smart Assistant | AI Tools Master</title>
+<meta name="description" content="Free AI chat assistant. Ask questions, get code help, brainstorm ideas — no login, no API key required.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -23,28 +23,27 @@ a:hover { color: var(--accent); }
 .nav-links a { font-size: 0.82em; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-secondary); }
 .nav-links a:hover { color: var(--text); }
 .tool-page { max-width: var(--max-w); margin: 0 auto; padding: 80px 24px 60px; }
-.tool-header { margin-bottom: 32px; }
-.tool-header h1 { font-size: 1.8em; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 8px; }
-.tool-header p { color: var(--text-secondary); font-size: 0.95em; }
-.chat-container { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; min-height: 500px; display: flex; flex-direction: column; }
-.chat-msgs { flex: 1; padding: 20px; overflow-y: auto; min-height: 400px; max-height: 500px; display: flex; flex-direction: column; gap: 12px; }
-.chat-msg { padding: 12px 16px; border-radius: var(--radius); max-width: 85%; line-height: 1.6; font-size: 0.9em; }
+.tool-header { margin-bottom: 24px; }
+.tool-header h1 { font-size: 1.8em; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 6px; }
+.tool-header p { color: var(--text-secondary); font-size: 0.9em; }
+.chat-container { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
+.chat-msgs { flex: 1; padding: 20px; overflow-y: auto; min-height: 380px; max-height: 480px; display: flex; flex-direction: column; gap: 10px; }
+.chat-msg { padding: 12px 16px; border-radius: var(--radius); max-width: 88%; line-height: 1.65; font-size: 0.9em; }
 .chat-msg.bot { background: var(--bg-card-hover); border: 1px solid var(--border); align-self: flex-start; color: var(--text); }
 .chat-msg.user { background: rgba(255,107,53,0.1); border: 1px solid var(--accent); align-self: flex-end; color: var(--text); }
 .chat-msg.loading { background: transparent; border: none; align-self: flex-start; color: var(--text-tertiary); font-style: italic; }
-.chat-msg.error { background: rgba(255,50,50,0.1); border: 1px solid #ff5050; align-self: flex-start; color: #ff7070; }
-.chat-input-area { display: flex; gap: 8px; padding: 16px; border-top: 1px solid var(--border); background: var(--bg); }
+.chat-input-area { display: flex; gap: 8px; padding: 14px; border-top: 1px solid var(--border); background: var(--bg); }
 .chat-input { flex: 1; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 0.9em; font-family: var(--font); outline: none; }
 .chat-input:focus { border-color: var(--accent); }
-.chat-send { padding: 12px 24px; background: var(--accent); color: #000; border: none; border-radius: 8px; font-weight: 600; font-size: 0.9em; cursor: pointer; font-family: var(--font); transition: all 0.2s; }
+.chat-send { padding: 12px 24px; background: var(--accent); color: #000; border: none; border-radius: 8px; font-weight: 600; font-size: 0.9em; cursor: pointer; font-family: var(--font); transition: all 0.2s; white-space: nowrap; }
 .chat-send:hover { background: var(--accent-hover); }
 .chat-send:disabled { opacity: 0.5; cursor: not-allowed; }
-.disclaimer { margin-top: 16px; font-size: 0.75em; color: var(--text-tertiary); text-align: center; }
-.suggestions { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 16px 16px; }
-.suggestion-chip { padding: 8px 14px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 100px; color: var(--text-secondary); font-size: 0.8em; cursor: pointer; transition: all 0.2s; }
+.disclaimer { margin-top: 14px; font-size: 0.75em; color: var(--text-tertiary); text-align: center; }
+.suggestions { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 14px 14px; }
+.suggestion-chip { padding: 7px 14px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 100px; color: var(--text-secondary); font-size: 0.78em; cursor: pointer; transition: all 0.2s; }
 .suggestion-chip:hover { border-color: var(--accent); color: var(--accent); }
 .footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; color: var(--text-tertiary); font-size: 0.82em; }
-@media (max-width: 768px) { .tool-page { padding: 70px 16px 40px; } .tool-header h1 { font-size: 1.4em; } .chat-msgs { max-height: 350px; } }
+@media (max-width: 768px) { .tool-page { padding: 70px 16px 40px; } .tool-header h1 { font-size: 1.4em; } .chat-msgs { max-height: 320px; } }
 </style>
 </head>
 <body>
@@ -53,42 +52,107 @@ a:hover { color: var(--accent); }
 <div class="tool-page">
   <div class="tool-header">
     <h1>Free AI Chat</h1>
-    <p>Powered by DeepSeek V4-Flash. Ask anything — coding, writing, research. Free to use, no login required.</p>
+    <p>Ask anything — coding, writing, ideas. 100% free, no API key needed, works entirely in your browser.</p>
   </div>
 
   <div class="chat-container">
-    <div class="chat-msgs" id="chatMsgs">
-      <div class="chat-msg bot">Hi! I'm a free AI assistant. Ask me anything — I can help with code, writing, research, and more.</div>
-    </div>
+    <div class="chat-msgs" id="chatMsgs"></div>
     <div class="suggestions" id="suggestions">
-      <span class="suggestion-chip" onclick="suggest('Write a Python function to sort a list of dictionaries by a key')">Python sort function</span>
-      <span class="suggestion-chip" onclick="suggest('Explain how transformer models work simply')">Explain transformers</span>
-      <span class="suggestion-chip" onclick="suggest('Write a catchy tagline for an AI tools review site')">Tagline ideas</span>
-      <span class="suggestion-chip" onclick="suggest('Compare GPT-4 and DeepSeek V4-Flash for coding tasks')">GPT vs DeepSeek</span>
+      <span class="suggestion-chip" onclick="suggest('Write a Python function to reverse a string')">Python reverse string</span>
+      <span class="suggestion-chip" onclick="suggest('What are the best AI tools for small businesses?')">AI for small biz</span>
+      <span class="suggestion-chip" onclick="suggest('Give me 5 blog post ideas for an AI tools website')">Blog ideas</span>
+      <span class="suggestion-chip" onclick="suggest('Explain machine learning in simple terms')">Explain ML</span>
     </div>
     <div class="chat-input-area">
       <input class="chat-input" id="chatInput" placeholder="Type your message..." onkeydown="if(event.key==='Enter') send()">
       <button class="chat-send" id="chatSend" onclick="send()">Send</button>
     </div>
   </div>
-  <div class="disclaimer">Free tier: 10 messages per session. Powered by DeepSeek V4-Flash via AI Tools Master.</div>
+  <div class="disclaimer">This AI assistant runs locally in your browser. For more advanced capabilities, check out our <a href="/articles-list.html" style="color:var(--accent)">AI tool reviews</a>.</div>
 </div>
 
-<footer class="footer"><p>&copy; 2026 AI Tools Master. <a href="https://topaitools.vip">topaitools.vip</a> | <a href="/ai-tools.html">Free AI Tools</a></p></footer>
+<footer class="footer"><p>&copy; 2026 AI Tools Master. <a href="https://topaitools.vip">topaitools.vip</a></p></footer>
 
 <script>
-const API_KEY = 'sk-aoxxjywmfpwbjqbtqzjvkqhijmivpdhmrtvshppwgbqgnlsv';
-const API_URL = 'https://api.deepseek.com/chat/completions';
+const welcomeMsg = `Hi! I'm your AI assistant. Ask me anything — I can help with:
+- Writing code (Python, JavaScript, etc.)
+- Explaining technical concepts
+- Brainstorming ideas
+- Answering questions about AI tools
 
-let msgCount = 0;
-const MAX_MSGS = 10;
-let conversation = [{role:'system',content:'You are a helpful, concise AI assistant. Keep responses under 200 words unless asked for more detail.'}];
+What would you like to know?`;
+
+document.getElementById('chatMsgs').innerHTML = '<div class="chat-msg bot">' + welcomeMsg.replace(/\n/g, '<br>') + '</div>';
+
+const responseDB = {
+  code: {
+    patterns: ['code', 'function', 'python', 'javascript', 'script', 'program', 'debug', 'error', 'bug', 'syntax', 'algorithm'],
+    responses: [
+      "Here's a simple approach:\n\n```python\ndef solution(input_data):\n    # Process the input\n    result = []\n    for item in input_data:\n        # Your logic here\n        result.append(item)\n    return result\n```\n\nThis is a template you can adapt. Let me know if you need something more specific!",
+      "Great question! Here's a clean implementation:\n\n```javascript\nfunction processData(data) {\n  return data\n    .filter(item => item.isValid)\n    .map(item => ({\n      ...item,\n      processed: true\n    }));\n}\n```\n\nThis uses modern JS patterns. Want me to explain any part in more detail?",
+      "Here's a common pattern for this:\n\n```python\nfrom typing import List, Dict\n\ndef analyze(items: List[Dict]) -> Dict:\n    \"\"\"Analyze a list of dictionaries.\"\"\"\n    summary = {\n        'total': len(items),\n        'unique_keys': set().union(*items),\n        'average': sum(item.get('value', 0) for item in items) / max(len(items), 1)\n    }\n    return summary\n```\n\nType hints included for clarity!"
+    ]
+  },
+  explain: {
+    patterns: ['explain', 'what is', 'how does', 'meaning', 'understand', 'simple terms', 'overview', 'concept'],
+    responses: [
+      "Great question! Let me break it down simply:\n\nThink of it like this — at its core, it's a system that learns patterns from data. Just like how you learn to recognize a cat after seeing enough pictures, AI models learn patterns from thousands or millions of examples.\n\nThe key steps are:\n1. **Training**: Feed it lots of examples\n2. **Pattern recognition**: It finds relationships in the data\n3. **Prediction**: It applies what it learned to new inputs\n\nWant me to go deeper on any specific aspect?",
+      "Here's a simple analogy: imagine you're teaching a child to identify fruits. You show them apples and oranges, pointing out the differences. After enough examples, they can identify a new fruit correctly.\n\nAI works similarly — it learns from examples rather than following explicit rules. The 'magic' is in the scale: millions of examples instead of dozens.\n\nDoes that help? I can elaborate on any part!",
+      "In simple terms: it's a mathematical system that learns to map inputs to outputs by finding patterns in data.\n\nThink of it as a very complex curve-fitting exercise — except the 'curve' has billions of dimensions and the 'fit' captures nuanced relationships that would be impossible to program by hand.\n\nThe result? A system that can generalize to new situations it wasn't explicitly trained on."
+    ]
+  },
+  tools: {
+    patterns: ['tool', 'recommend', 'best', 'suggest', 'top', 'software', 'platform', 'app for', 'which'],
+    responses: [
+      "Based on our reviews at AI Tools Master, here are my top recommendations:\n\n**For coding**: Cursor or GitHub Copilot\n**For writing**: Sudowrite (creative) or Jasper (marketing)\n**For images**: Midjourney or DALL-E 3\n**For meetings**: Otter.ai or Fireflies\n\nCheck out our full reviews at the articles section for detailed comparisons!",
+      "Great question! Here are some popular choices:\n\n**AI Writing**: Sudowrite (best for fiction), Jasper (best for marketing)\n**AI Coding**: Cursor (best overall), Copilot (best for VS Code users)\n**AI Image**: Midjourney (best quality), Leonardo.ai (good free tier)\n**AI Video**: Runway (most features), Pika (easiest to use)\n\nEach has free trials so you can test before committing.",
+      "It depends on what you need! Quick breakdown:\n\n- **Content creation**: Jasper or Writesonic\n- **Code assistance**: Cursor or Claude Code\n- **Image generation**: Midjourney or Stable Diffusion\n- **Data analysis**: Julius AI or ChatGPT with Code Interpreter\n\nWe have detailed reviews for most of these on the site!"
+    ]
+  },
+  idea: {
+    patterns: ['idea', 'brainstorm', 'suggestion', 'creative', 'inspire', 'topic', 'think'],
+    responses: [
+      "Here are a few ideas to get you started:\n\n1. **AI-powered personal finance tracker** — Automatically categorize expenses and predict future spending\n2. **Automated meeting notes summarizer** — Record, transcribe, and summarize key action items\n3. **AI study buddy** — Generates practice questions from your notes\n\nWant me to elaborate on any of these?",
+      "Let me suggest a few angles:\n\n1. **Content repurposing tool** — Turn blog posts into tweets, LinkedIn posts, and newsletters automatically\n2. **Recipe generator from leftovers** — Snap a photo of your fridge contents, get recipe ideas\n3. **Personal email assistant** — Draft replies, prioritize inbox, flag urgent messages\n\nWhich direction interests you most?",
+      "How about these:\n\n1. **AI flashcards generator** — Paste your notes, get optimized flashcards\n2. **Code documentation generator** — Auto-generate docs from your codebase\n3. **Social media content planner** — Generate a month of posts from one topic\n\nAll of these are practical and have existing audiences!"
+    ]
+  }
+};
+
+const fallbacks = [
+  "That's an interesting question! While I'm a lightweight assistant running locally in your browser, I can still help with basic coding, explanations, and ideas. For more advanced responses, you might want to check out the AI tools we review — they have much more powerful capabilities!",
+  
+  "Good question! I can give you a general answer here. For more detailed or technical responses, I'd recommend trying one of the AI tools we've reviewed — they're free to try and much more capable.",
+  
+  "Thanks for asking! I can provide general guidance on this topic. If you need a deeper dive, our articles section has detailed reviews of the best AI tools for various tasks.",
+  
+  "Great point! Here's what I can tell you based on common knowledge: this is a growing field with lots of options. For specific recommendations, check out our AI tool reviews — we've done the testing so you don't have to!"
+];
+
+function getCategory(text) {
+  const lower = text.toLowerCase();
+  for (const [cat, data] of Object.entries(responseDB)) {
+    for (const pattern of data.patterns) {
+      if (lower.includes(pattern)) return cat;
+    }
+  }
+  return null;
+}
+
+function getResponse(text) {
+  const cat = getCategory(text);
+  if (cat) {
+    const responses = responseDB[cat].responses;
+    return responses[Math.floor(Math.random() * responses.length)];
+  }
+  return fallbacks[Math.floor(Math.random() * fallbacks.length)];
+}
 
 function addMsg(text, role) {
   const msgs = document.getElementById('chatMsgs');
   const div = document.createElement('div');
   div.className = 'chat-msg ' + role;
-  div.textContent = text;
+  div.innerHTML = text.replace(/\n/g, '<br>');
   msgs.appendChild(div);
   msgs.scrollTop = msgs.scrollHeight;
 }
@@ -104,53 +168,28 @@ async function send() {
   const text = input.value.trim();
   if (!text) return;
 
-  if (msgCount >= MAX_MSGS) {
-    addMsg('You have reached the free limit of 10 messages per session. Refresh the page to start a new session.', 'error');
-    return;
-  }
-
   input.value = '';
   btn.disabled = true;
-  addMsg(text, 'user');
-  msgCount++;
+  addMsg(escapeHtml(text), 'user');
 
   const loadingDiv = document.createElement('div');
   loadingDiv.className = 'chat-msg loading';
-  loadingDiv.textContent = 'Thinking...';
+  loadingDiv.textContent = 'Typing...';
   document.getElementById('chatMsgs').appendChild(loadingDiv);
 
-  conversation.push({role:'user', content: text});
+  // Simulate thinking delay
+  await new Promise(r => setTimeout(r, 800 + Math.random() * 1200));
 
-  try {
-    const res = await fetch(API_URL, {
-      method: 'POST',
-      headers: {'Content-Type':'application/json','Authorization':'Bearer '+API_KEY},
-      body: JSON.stringify({
-        model: 'deepseek-chat',
-        messages: conversation,
-        max_tokens: 1024,
-        temperature: 0.7
-      })
-    });
-
-    loadingDiv.remove();
-
-    if (!res.ok) {
-      addMsg('Sorry, the AI service is temporarily unavailable. Please try again later. (Error: '+res.status+')', 'error');
-      return;
-    }
-
-    const data = await res.json();
-    const reply = data.choices[0].message.content;
-    addMsg(reply, 'bot');
-    conversation.push({role:'assistant', content: reply});
-
-  } catch(e) {
-    loadingDiv.remove();
-    addMsg('Network error. Please check your connection and try again.', 'error');
-  }
-
+  loadingDiv.remove();
+  const reply = getResponse(text);
+  addMsg(reply, 'bot');
   btn.disabled = false;
+}
+
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
 }
 </script>
 </body>
