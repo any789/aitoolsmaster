@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="google-adsense-account" content="ca-pub-4720141167708068">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Prompt Generator — Free Prompt Templates for ChatGPT, Claude, DeepSeek | AI Tools Master</title>
+<meta name="description" content="Free AI prompt generator. Get optimized prompts for coding, writing, image generation, analysis, and more. Works with ChatGPT, Claude, DeepSeek, Gemini.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --bg: #000000; --bg-card: #0c0c0e; --bg-card-hover: #111114; --border: #1a1a1e; --border-hover: #2a2a30; --text: #e8e8ea; --text-secondary: #888890; --text-tertiary: #555560; --accent: #ff6b35; --accent-hover: #ff8445; --radius: 12px; --max-w: 1000px; --font: 'Space Grotesk', -apple-system, sans-serif; }
+html { font-size: 16px; }
+body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+a { color: var(--text); text-decoration: none; }
+a:hover { color: var(--accent); }
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(0,0,0,0.9); backdrop-filter: blur(24px); border-bottom: 1px solid var(--border); }
+.nav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+.nav-logo { font-size: 1.1em; font-weight: 600; }
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 28px; list-style: none; }
+.nav-links a { font-size: 0.82em; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-secondary); }
+.nav-links a:hover, .nav-links a.active { color: var(--text); }
+.tool-page { max-width: var(--max-w); margin: 0 auto; padding: 80px 24px 60px; }
+.tool-header { margin-bottom: 24px; }
+.tool-header h1 { font-size: 1.8em; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 6px; }
+.tool-header p { color: var(--text-secondary); font-size: 0.9em; }
+.tool-container { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; }
+.cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; margin-bottom: 20px; }
+.cat-btn { padding: 10px 8px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; color: var(--text-secondary); font-size: 0.82em; cursor: pointer; transition: all 0.2s; text-align: center; font-family: var(--font); }
+.cat-btn:hover { border-color: var(--accent); color: var(--text); }
+.cat-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(255,107,53,0.08); font-weight: 600; }
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; font-size: 0.85em; color: var(--text-secondary); margin-bottom: 6px; font-weight: 500; }
+.form-input { width: 100%; padding: 12px 16px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 0.9em; font-family: var(--font); outline: none; }
+.form-input:focus { border-color: var(--accent); }
+.form-textarea { width: 100%; padding: 12px 16px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 0.9em; font-family: var(--font); outline: none; min-height: 80px; resize: vertical; }
+.form-textarea:focus { border-color: var(--accent); }
+.form-select { width: 100%; padding: 12px 16px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 0.9em; font-family: var(--font); outline: none; cursor: pointer; }
+.form-select:focus { border-color: var(--accent); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.prompt-output { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; margin-top: 16px; min-height: 100px; white-space: pre-wrap; line-height: 1.7; font-size: 0.9em; display: none; }
+.prompt-output.show { display: block; }
+.prompt-actions { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+.btn-primary { padding: 12px 28px; background: var(--accent); color: #000; border: none; border-radius: 8px; font-weight: 600; font-size: 0.9em; cursor: pointer; font-family: var(--font); transition: all 0.2s; }
+.btn-primary:hover { background: var(--accent-hover); }
+.btn-secondary { padding: 12px 28px; background: transparent; color: var(--text-secondary); border: 1px solid var(--border); border-radius: 8px; font-weight: 500; font-size: 0.9em; cursor: pointer; font-family: var(--font); transition: all 0.2s; }
+.btn-secondary:hover { border-color: var(--text); color: var(--text); }
+.copy-toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #000; padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 0.85em; opacity: 0; transition: opacity 0.3s; pointer-events: none; z-index: 200; }
+.copy-toast.show { opacity: 1; }
+.footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; color: var(--text-tertiary); font-size: 0.82em; }
+.ad-slot { background: var(--bg-card); border: 1px dashed var(--border); border-radius: var(--radius); padding: 20px; text-align: center; margin: 24px 0; }
+.ad-label { font-size: 0.6em; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-tertiary); }
+@media (max-width: 768px) { .tool-page { padding: 70px 16px 40px; } .tool-header h1 { font-size: 1.4em; } .form-row { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">AI<span>Tools Master</span></a><ul class="nav-links"><li><a href="/">Home</a></li><li><a href="/articles-list.html">Articles</a></li><li><a href="/ai-tools.html" style="color:var(--accent)">Free AI Tools</a></li></ul></div></nav>
+
+<div class="tool-page">
+  <div class="tool-header">
+    <h1>AI Prompt Generator</h1>
+    <p>Get optimized prompts for any AI task. Works with ChatGPT, Claude, DeepSeek, Gemini — just copy and use.</p>
+  </div>
+
+  <div class="ad-slot"><span class="ad-label">Sponsor</span></div>
+
+  <div class="tool-container">
+    <div class="cat-grid" id="catGrid">
+      <button class="cat-btn active" data-cat="code">💻 Coding</button>
+      <button class="cat-btn" data-cat="write">✍️ Writing</button>
+      <button class="cat-btn" data-cat="image">🎨 Image Gen</button>
+      <button class="cat-btn" data-cat="analysis">📊 Analysis</button>
+      <button class="cat-btn" data-cat="translate">🌐 Translate</button>
+      <button class="cat-btn" data-cat="business">💼 Business</button>
+      <button class="cat-btn" data-cat="learn">📚 Learning</button>
+      <button class="cat-btn" data-cat="creative">🎭 Creative</button>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>What do you need help with?</label>
+        <input class="form-input" id="topicInput" placeholder="e.g., Python web scraper, blog post about AI, product description...">
+      </div>
+      <div class="form-group">
+        <label>Target AI Model</label>
+        <select class="form-select" id="modelSelect">
+          <option value="auto">Auto (best fit)</option>
+          <option value="chatgpt">ChatGPT</option>
+          <option value="claude">Claude</option>
+          <option value="deepseek">DeepSeek</option>
+          <option value="gemini">Gemini</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Additional details (optional)</label>
+      <textarea class="form-textarea" id="detailInput" placeholder="Any specific requirements, tone preferences, output format, or constraints..."></textarea>
+    </div>
+
+    <button class="btn-primary" onclick="generatePrompt()">Generate Prompt ✨</button>
+
+    <div class="prompt-output" id="promptOutput"></div>
+    <div class="prompt-actions" id="promptActions" style="display:none">
+      <button class="btn-primary" onclick="copyPrompt()">📋 Copy to Clipboard</button>
+      <button class="btn-secondary" onclick="regenerate()">🔄 Regenerate</button>
+    </div>
+  </div>
+
+  <div class="ad-slot"><span class="ad-label">Sponsor</span></div>
+</div>
+
+<footer class="footer"><p>&copy; 2026 AI Tools Master. <a href="https://topaitools.vip">topaitools.vip</a></p></footer>
+
+<div class="copy-toast" id="copyToast">Copied to clipboard!</div>
+
+<script>
+let currentCat = 'code';
+
+document.querySelectorAll('.cat-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    currentCat = this.dataset.cat;
+  });
+});
+
+const templates = {
+  code: {
+    name: 'Coding',
+    generate: function(topic, model, details) {
+      const prompts = [
+`You are an expert programmer. Write ${topic || 'a solution'}.
+
+Requirements:
+- Write clean, well-documented code
+- Include error handling
+- Add comments explaining key logic
+- Consider edge cases${details ? '\n- ' + details : ''}
+
+Please provide:
+1. The complete code
+2. A brief explanation of how it works
+3. Example usage
+4. Any dependencies needed`,
+`Act as a senior software engineer. I need help with ${topic || 'a programming task'}.
+
+Please:
+- Analyze the requirements carefully
+- Provide the most efficient solution
+- Include type hints and documentation
+- Explain your design decisions
+- Mention potential pitfalls${details ? '\n- Additional context: ' + details : ''}
+
+Code quality: production-ready, well-structured, following best practices.`,
+`Task: ${topic || 'Implement a solution'}
+
+I need:
+- Working code that handles edge cases
+- Clear documentation
+- A test example
+- Performance considerations${details ? '\n- Additional requirements: ' + details : ''}
+
+Please think step by step, then provide the complete implementation.`
+      ];
+      return prompts;
+    }
+  },
+  write: {
+    name: 'Writing',
+    generate: function(topic, model, details) {
+      const prompts = [
+`Write ${topic || 'a piece of content'} with the following specifications:
+
+Tone: Professional yet engaging${details ? '\nAdditional guidance: ' + details : ''}
+Structure:
+- Opening hook that grabs attention
+- Main body with key points
+- Strong conclusion with call to action
+
+Style: Clear, concise, and persuasive. Use short paragraphs. Avoid jargon.`,
+`You are a professional writer. Create ${topic || 'compelling content'}.
+
+Guidelines:
+- Target audience: General readers interested in this topic
+- Voice: Authoritative but accessible
+- Format: Well-structured with clear sections
+- Length: Comprehensive but not verbose${details ? '\n- Specific requirements: ' + details : ''}
+
+Focus on providing genuine value — not just information, but insight.`,
+`Write about ${topic || 'a topic'} in a way that is both informative and engaging.
+
+Requirements:
+1. Start with a compelling hook
+2. Use real examples or analogies
+3. Break complex ideas into simple terms
+4. End with actionable takeaways${details ? '\n5. ' + details : ''}
+
+Format: Use markdown with headings, bullet points, and emphasis where appropriate.`
+      ];
+      return prompts;
+    }
+  },
+  image: {
+    name: 'Image Generation',
+    generate: function(topic, model, details) {
+      const prompts = [
+`Create a detailed image generation prompt for ${topic || 'a scene'}.
+
+Style: Photorealistic, cinematic lighting, 8K quality
+Subject: ${topic || 'Main subject'}
+Environment: Detailed background setting
+Mood: Specific atmosphere or emotion
+Lighting: Professional lighting setup
+Composition: Rule of thirds, focal point
+Colors: Specific color palette${details ? '\nExtra: ' + details : ''}
+
+Format the prompt for Midjourney/Stable Diffusion/DALL-E with all parameters.`,
+`Image prompt for ${topic || 'a visual concept'}:
+
+[Subject]: ${topic || 'Describe the main subject in detail'}
+[Style]: ${model === 'auto' ? 'Choose artistic style' : 'Specific art style'}
+[Lighting]: ${details || 'Professional lighting'}
+[Composition]: Dynamic, well-framed
+[Colors]: Harmonious color scheme
+[Mood]: Evoke specific emotion
+
+Include: camera angle, lens type, lighting direction, texture details, and atmosphere.`,
+`Generate a professional image prompt for AI art generation:
+
+Main element: ${topic || 'Primary subject'}
+Art style: ${details ? details : 'Cinematic, high detail'}
+Technical specs: 
+- Aspect ratio: 16:9 or 1:1
+- Quality: Highest detail
+- Lighting: Dramatic, volumetric
+
+Negative prompts: blurry, low quality, distorted, extra limbs
+The prompt should work well with both Midjourney and DALL-E.`
+      ];
+      return prompts;
+    }
+  },
+  analysis: {
+    name: 'Data Analysis',
+    generate: function(topic, model, details) {
+      const prompts = [
+`You are a data analyst. Analyze ${topic || 'the given data'}.
+
+Please provide:
+1. Key insights and patterns
+2. Statistical summary
+3. Visualizations suggested
+4. Recommendations based on data
+5. Potential biases or limitations${details ? '\nContext: ' + details : ''}
+
+Format: Clear, structured report with actionable findings.`,
+`Act as a business intelligence analyst. I need an analysis of ${topic || 'this dataset'}.
+
+Deliverables:
+- Executive summary (3-5 bullet points)
+- Deep dive into key metrics
+- Trend analysis with timeframe
+- Correlations and causations
+- Data quality assessment${details ? '\n- Additional context: ' + details : ''}
+
+Base all conclusions on data, not assumptions.`,
+`Analyze ${topic || 'this topic'} from multiple angles.
+
+Focus areas:
+1. What the data tells us
+2. What it doesn't tell us
+3. Key takeaways
+4. Actionable recommendations
+5. Further analysis needed${details ? '\nSpecific focus: ' + details : ''}
+
+Be objective, thorough, and practical in your analysis.`
+      ];
+      return prompts;
+    }
+  },
+  translate: {
+    name: 'Translation',
+    generate: function(topic, model, details) {
+      const prompts = [
+`Translate the following ${topic || 'text'} with high accuracy.
+
+Requirements:
+- Maintain original meaning and nuance
+- Adapt idioms and cultural references appropriately
+- Preserve tone and style
+- Consider target audience cultural context${details ? '\nSpecific instructions: ' + details : ''}
+
+Provide:
+1. The translation
+2. Notes on key translation decisions
+3. Alternative phrasings for ambiguous parts`,
+`You are a professional translator. Handle this ${topic || 'translation task'}.
+
+Quality standards:
+- Natural fluency in target language
+- Terminology consistency
+- Cultural adaptation without losing meaning
+- Register matching (formal/informal)${details ? '\n- ' + details : ''}
+
+Output: Clean translation with brief explanation of any adaptation choices.`,
+`Translate ${topic || 'the provided text'} professionally.
+
+Approach:
+1. Understand context and purpose
+2. Translate with attention to nuance
+3. Review for natural flow
+4. Verify technical terms${details ? '\nContext notes: ' + details : ''}
+
+Goal: A translation that reads as if originally written in the target language.`
+      ];
+      return prompts;
+    }
+  },
+  business: {
+    name: 'Business',
+    generate: function(topic, model, details) {
+      const prompts = [
+`You are a business consultant. Help me with ${topic || 'a business challenge'}.
+
+Deliver:
+1. Situation analysis
+2. Key challenges identified
+3. Strategic recommendations
+4. Implementation roadmap
+5. Success metrics${details ? '\nContext: ' + details : ''}
+
+Focus on practical, actionable advice with clear ROI.`,
+`Create a business strategy for ${topic || 'this business scenario'}.
+
+Structure:
+- Executive summary
+- Market analysis
+- Competitive landscape
+- Strategic recommendations
+- Risk assessment
+- Timeline and milestones${details ? '\n- Additional context: ' + details : ''}
+
+Be specific, data-driven, and actionable.`,
+`Help me develop a plan for ${topic || 'a business initiative'}.
+
+Please cover:
+1. Objectives and key results
+2. Resource requirements
+3. Timeline with milestones
+4. Risk mitigation
+5. Success criteria${details ? '\n- ' + details : ''}
+
+Focus on practical execution, not just theory.`
+      ];
+      return prompts;
+    }
+  },
+  learn: {
+    name: 'Learning',
+    generate: function(topic, model, details) {
+      const prompts = [
+`You are a patient teacher. Explain ${topic || 'a concept'} to me.
+
+Teaching approach:
+- Start with the big picture
+- Use analogies and real-world examples
+- Break down complex ideas step by step
+- Check understanding along the way${details ? '\nFocus area: ' + details : ''}
+
+Format: Clear, engaging, and structured for effective learning.`,
+`Teach me about ${topic || 'this subject'} as if I'm a complete beginner.
+
+Structure:
+1. What is it? (Simple definition)
+2. Why does it matter? (Real importance)
+3. How does it work? (Core mechanism)
+4. Key concepts (Building blocks)
+5. Practical example (Real application)${details ? '\nSpecific interest: ' + details : ''}
+
+Use analogies and avoid jargon. Make it stick.`,
+`Create a learning path for ${topic || 'this topic'}.
+
+Outline:
+1. Prerequisites needed
+2. Core concepts (ordered by dependency)
+3. Practical exercises for each concept
+4. Common pitfalls to avoid
+5. Next steps for advanced learning${details ? '\n- ' + details : ''}
+
+Make it progressive — each step builds on the previous one.`
+      ];
+      return prompts;
+    }
+  },
+  creative: {
+    name: 'Creative',
+    generate: function(topic, model, details) {
+      const prompts = [
+`Let's get creative with ${topic || 'a creative project'}.
+
+Brainstorm:
+1. Multiple concepts or angles
+2. Core theme or message
+3. Unique selling point
+4. Execution approach
+5. Creative elements and techniques${details ? '\nConstraints: ' + details : ''}
+
+Think outside the box. Push boundaries. Be original.`,
+`You are a creative director. Generate innovative ideas for ${topic || 'a creative challenge'}.
+
+Process:
+- Divergent thinking: Generate 5+ wild ideas
+- Convergent thinking: Refine the best ones
+- Execution plan: How to bring it to life
+- Evaluation: What makes it work${details ? '\n- ' + details : ''}
+
+Prioritize originality and impact over safety.`,
+`Create something unique about ${topic || 'this theme'}.
+
+Approach:
+1. Find an unexpected angle
+2. Build a narrative around it
+3. Add sensory details
+4. Include an element of surprise
+5. End with something memorable${details ? '\nSpecific direction: ' + details : ''}
+
+Make it fresh, unexpected, and engaging.`
+      ];
+      return prompts;
+    }
+  }
+};
+
+function generatePrompt() {
+  const topic = document.getElementById('topicInput').value.trim();
+  const model = document.getElementById('modelSelect').value;
+  const details = document.getElementById('detailInput').value.trim();
+  
+  const catData = templates[currentCat];
+  if (!catData) return;
+  
+  const prompts = catData.generate(topic || catData.name + ' task', model, details);
+  // Pick one
+  const prompt = prompts[Math.floor(Math.random() * prompts.length)];
+  
+  // Add model-specific prefix
+  let prefix = '';
+  if (model !== 'auto') {
+    const modelNames = { chatgpt: 'ChatGPT', claude: 'Claude', deepseek: 'DeepSeek', gemini: 'Gemini' };
+    prefix = `[Optimized for ${modelNames[model] || model}]\n\n`;
+  }
+  
+  const output = document.getElementById('promptOutput');
+  output.textContent = prefix + prompt;
+  output.classList.add('show');
+  document.getElementById('promptActions').style.display = 'flex';
+}
+
+function copyPrompt() {
+  const text = document.getElementById('promptOutput').textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const toast = document.getElementById('copyToast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2000);
+  });
+}
+
+function regenerate() {
+  generatePrompt();
+}
+</script>
+</body>
+</html>
