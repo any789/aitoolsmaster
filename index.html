@@ -60,9 +60,27 @@ a:hover { color: var(--accent); }
 .nav-toggle { display: none; background: none; border: none; color: var(--text); font-size: 1.5em; cursor: pointer; }
 
 /* Hero */
-.hero { padding: 140px 24px 60px; text-align: center; max-width: 640px; margin: 0 auto; }
-.hero h1 { font-size: 2.6em; font-weight: 700; letter-spacing: -0.04em; line-height: 1.12; margin-bottom: 16px; }
-.hero p { font-size: 1em; color: var(--text-secondary); line-height: 1.7; }
+.hero { padding: 140px 24px 40px; text-align: center; max-width: 720px; margin: 0 auto; }
+.hero h1 { font-size: 2.8em; font-weight: 700; letter-spacing: -0.04em; line-height: 1.12; margin-bottom: 16px; }
+.hero p { font-size: 1.05em; color: var(--text-secondary); line-height: 1.7; max-width: 540px; margin:0 auto; }
+.hero .stats { display:flex; justify-content:center; gap:32px; margin-top:28px; flex-wrap:wrap; }
+.hero .stat-item { display:flex; flex-direction:column; align-items:center; }
+.hero .stat-num { font-size:1.6em; font-weight:700; color:var(--accent); letter-spacing:-0.02em; }
+.hero .stat-label { font-size:0.8em; color:var(--text-tertiary); letter-spacing:0.03em; text-transform:uppercase; }
+.hero .cta-btn { display:inline-block; margin-top:24px; padding:12px 32px; background:var(--accent); color:#000; font-weight:600; border-radius:8px; font-size:0.95em; transition:all 0.2s; letter-spacing:0.02em; }
+.hero .cta-btn:hover { background:var(--accent-hover); color:#000; }
+.free-tools-section { max-width:var(--max-w); margin:0 auto; padding:0 24px 40px; }
+.free-tools-section .section-title { margin-bottom:16px; }
+.free-tools-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.free-tool-card { display:block; padding:24px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); transition:all 0.25s; text-align:center; }
+.free-tool-card:hover { border-color:var(--accent); background:var(--bg-card-hover); }
+.free-tool-icon { font-size:2em; margin-bottom:10px; }
+.free-tool-name { font-size:1em; font-weight:600; margin-bottom:4px; }
+.free-tool-desc { font-size:0.85em; color:var(--text-secondary); }
+@media(max-width:720px){
+  .free-tools-grid { grid-template-columns:1fr; }
+  .hero .stats { gap:20px; }
+}
 
 /* Main container */
 .main { max-width: var(--max-w); margin: 0 auto; padding: 0 24px 60px; }
@@ -107,6 +125,7 @@ a:hover { color: var(--accent); }
 @media (max-width: 768px) {
   .hero { padding: 100px 20px 40px; }
   .hero h1 { font-size: 1.8em; }
+  .hero .stat-item { min-width:80px; }
   .nav-links { display: none; }
   .nav-cats { display: none; }
   .nav-cats.show { display: flex; }
@@ -149,6 +168,24 @@ a:hover { color: var(--accent); }
 <section class="hero">
   <h1>Honest AI Tool Reviews</h1>
   <p>We test, compare, and rank the best AI tools — no hype, no fluff. Just what works and what doesn't.</p>
+  
+  <div class="stats">
+    <div class="stat-item">
+      <span class="stat-num">32+</span>
+      <span class="stat-label">In-depth Reviews</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">8</span>
+      <span class="stat-label">Categories</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">3</span>
+      <span class="stat-label">Free Tools</span>
+    </div>
+  </div>
+
+  <a href="#articles" class="cta-btn">Browse All Reviews →</a>
+
   <div style="margin-top:24px;max-width:480px;margin-left:auto;margin-right:auto">
     <input type="text" id="search-input" placeholder="Search articles..." style="width:100%;padding:12px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:0.95em;outline:none;font-family:var(--font)">
     <div id="search-results" style="margin-top:4px;text-align:left;display:none"></div>
@@ -168,6 +205,27 @@ a:hover { color: var(--accent); }
       <a href="/articles/best-ai-image-generators-2026.html" class="trending-tag" style="display:inline-block;padding:6px 16px;background:rgba(255,107,53,0.06);border:1px solid var(--accent);border-radius:100px;color:var(--accent);font-size:0.82em;white-space:nowrap;flex-shrink:0;font-weight:500">🖼️ AI Image Generators</a>
       <a href="/articles/ai-coding-agents-vs-human-developers-2026.html" class="trending-tag" style="display:inline-block;padding:6px 16px;background:rgba(255,107,53,0.06);border:1px solid var(--accent);border-radius:100px;color:var(--accent);font-size:0.82em;white-space:nowrap;flex-shrink:0;font-weight:500">⚔️ AI vs Developers</a>
     </div>
+  </div>
+</section>
+
+<section class="free-tools-section">
+  <h2 class="section-title">🧰 Free Tools — No Signup Needed</h2>
+  <div class="free-tools-grid">
+    <a href="/tools/ai-chat.html" class="free-tool-card">
+      <div class="free-tool-icon">💬</div>
+      <div class="free-tool-name">AI Chat</div>
+      <div class="free-tool-desc">Chat with an AI assistant. No login required.</div>
+    </a>
+    <a href="/tools/ai-write.html" class="free-tool-card">
+      <div class="free-tool-icon">✍️</div>
+      <div class="free-tool-name">AI Writer</div>
+      <div class="free-tool-desc">Generate blog posts, emails & social content.</div>
+    </a>
+    <a href="/tools/ai-image-generator.html" class="free-tool-card">
+      <div class="free-tool-icon">🎨</div>
+      <div class="free-tool-name">AI Image Generator</div>
+      <div class="free-tool-desc">Create images from text prompts instantly.</div>
+    </a>
   </div>
 </section>
 
@@ -249,7 +307,7 @@ a:hover { color: var(--accent); }
     <a href="#free-tools" class="tag" onclick="scrollToCategory('free-tools')">Free Tools</a>
   </div>
 
-  <div style="display:flex;align-items:baseline;justify-content:space-between;margin-top:40px;margin-bottom:20px"><h2 class="section-title" style="margin:0">Latest Reviews</h2><a href="/articles-list.html" style="font-size:0.82em;color:var(--text-tertiary)">View all 32 articles →</a></div>
+  <div id="articles" style="display:flex;align-items:baseline;justify-content:space-between;margin-top:40px;margin-bottom:20px"><h2 class="section-title" style="margin:0">Latest Reviews</h2><a href="/articles-list.html" style="font-size:0.82em;color:var(--text-tertiary)">View all 32 articles →</a></div>
 
 <div class="article-list">
       <a href="/articles/morgan-stanley-ai-breakthrough-power-grid-2026.html" class="article-card">
