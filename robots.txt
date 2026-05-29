@@ -1,3 +1,22 @@
 User-agent: *
 Allow: /
+
+# 放行AdSense爬虫（必须，否则不显示广告）
+User-agent: Mediapartners-Google
+Allow: /
+
+# 放行Google索引爬虫
+User-agent: Googlebot
+Allow: /
+
+# 阻止AI训练爬虫
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
 Sitemap: https://topaitools.vip/sitemap.xml
