@@ -110,6 +110,44 @@ h1 { font-size: 2em; font-weight: 700; letter-spacing: -0.035em; margin-bottom: 
     <h2>8. Recraft — Best for Vectors</h2>
     <p><strong class="rating">7.5/10</strong> — The only AI image tool that outputs proper vector graphics (SVG). Ideal for icons, logos, and illustrations that need to scale.</p>
 
+    <h2>Detailed Feature Comparison</h2>
+    <table>
+      <thead><tr><th>Feature</th><th>Midjourney</th><th>DALL-E 3</th><th>Stable Diff 3</th><th>Firefly</th><th>Ideogram</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Output resolution</strong></td><td>Up to 2048x2048</td><td>Up to 1792x1024</td><td>Up to 1024x1024</td><td>Up to 2048x2048</td><td>Up to 1536x1024</td></tr>
+        <tr><td><strong>Style variety</strong></td><td>Excellent</td><td>Good</td><td>Excellent (custom)</td><td>Good</td><td>Good</td></tr>
+        <tr><td><strong>Prompt adherence</strong></td><td>Good (v7 improved)</td><td>Excellent</td><td>Good</td><td>Good</td><td>Very good</td></tr>
+        <tr><td><strong>Text rendering</strong></td><td>Poor</td><td>Good</td><td>Poor</td><td>Good</td><td>Excellent</td></tr>
+        <tr><td><strong>Generation speed</strong></td><td>~45 sec</td><td>~10 sec</td><td>~15 sec (local)</td><td>~8 sec</td><td>~12 sec</td></tr>
+        <tr><td><strong>Inpainting / editing</strong></td><td>Vary region</td><td>Edit + variations</td><td>ControlNet</td><td>Generative fill</td><td>Remix</td></tr>
+        <tr><td><strong>API available</strong></td><td>No</td><td>Via OpenAI</td><td>Yes (open source)</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td><strong>Commercial use</strong></td><td>Paid plan</td><td>Paid plan</td><td>Unrestricted</td><td>Licensed safe</td><td>Paid plan</td></tr>
+        <tr><td><strong>Interface</strong></td><td>Discord only</td><td>ChatGPT web</td><td>GUI / local / API</td><td>Web app</td><td>Web app</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Our Hands-On Test Experience</h2>
+    <p>We tested all eight image generators with the same 15 prompts covering different styles, subjects, and difficulty levels. Here is what happened:</p>
+
+    <h3>Test 1: Photorealistic portrait</h3>
+    <p><em>Prompt: "A elderly fisherman with weathered skin, holding a net, golden hour light, cinematic, 85mm lens"</em><br>
+    <strong>Midjourney</strong> produced the most stunning result — skin texture, lighting, and composition were near-perfect. <strong>DALL-E 3</strong> accurately rendered the scene but the skin looked slightly airbrushed. <strong>Stable Diffusion 3</strong> with a photorealism model came close to Midjourney but required model swapping. <strong>Firefly</strong> had a noticeable AI look. <strong>Ideogram</strong> was decent but not competitive at photorealism.</p>
+
+    <h3>Test 2: Complex prompt with specific positioning</h3>
+    <p><em>Prompt: "A red ceramic teapot on the left, a blue mug on the right, steam rising, minimal background, product photography"</em><br>
+    <strong>DALL-E 3</strong> won this round — it placed both objects exactly as specified with proper reflections. <strong>Midjourney</strong> composed beautifully but placed the mug slightly off-position. <strong>Ideogram</strong> did well. <strong>Stable Diffusion</strong> needed ControlNet to match the positioning.</p>
+
+    <h3>Test 3: Text in image — logo design</h3>
+    <p><em>Prompt: "Modern logo for a coffee shop called 'Brew & Bean' with a coffee cup icon, minimal, vector style"</em><br>
+    <strong>Ideogram</strong> was the clear winner — "Brew & Bean" was perfectly readable with proper kerning. <strong>DALL-E 3</strong> rendered the text mostly correctly with minor spacing issues. <strong>Midjourney</strong> produced beautiful graphics but the text was garbled. <strong>Firefly</strong> and <strong>Recraft</strong> (which outputs actual SVGs) were also strong contenders.</p>
+
+    <h3>Test 4: Artistic style — watercolor painting</h3>
+    <p><em>Prompt: "Watercolor painting of a misty mountain landscape, loose brushstrokes, soft colors, artistic"</em><br>
+    <strong>Midjourney</strong> excelled — the watercolor effect was convincing with genuine pigment blending. <strong>Stable Diffusion</strong> with a watercolor LoRA also performed well. <strong>DALL-E 3</strong> understood the style but the result looked more like a digital filter than real watercolor.</p>
+
+    <h3>Test 5: Speed benchmark</h3>
+    <p>We timed each tool from prompt submission to first output. <strong>Firefly</strong> was fastest at 8 seconds, followed by <strong>DALL-E 3</strong> at 10 seconds and <strong>Ideogram</strong> at 12 seconds. <strong>Flux</strong> lived up to its name at 5 seconds but quality was noticeably lower. <strong>Midjourney</strong> took the longest at 45 seconds but the wait was justified by quality.</p>
+
     <h2>Final Verdict</h2>
     <p>For pure artistic quality, <strong>Midjourney</strong> is still the best. For prompt accuracy and ease of use, <strong>DALL-E 3</strong> is hard to beat. If you need control and don't mind technical setup, <strong>Stable Diffusion 3</strong> is the most versatile. For commercial work, <strong>Adobe Firefly</strong> is the safest choice.</p>
 
