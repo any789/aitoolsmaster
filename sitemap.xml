@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://topaitools.vip</loc><priority>1.0</priority></url>
+  <url><loc>https://topaitools.vip/about.html</loc><priority>0.7</priority></url>
+  <url><loc>https://topaitools.vip/privacy-policy.html</loc><priority>0.5</priority></url>
   <url><loc>https://topaitools.vip/articles-list.html</loc><priority>0.9</priority></url>
+  <url><loc>https://topaitools.vip/ai-tools.html</loc><priority>0.8</priority></url>
+  <url><loc>https://topaitools.vip/ai-chat.html</loc><priority>0.8</priority></url>
+  <url><loc>https://topaitools.vip/ai-image-style.html</loc><priority>0.8</priority></url>
+  <url><loc>https://topaitools.vip/ai-prompt-generator.html</loc><priority>0.8</priority></url>
   <url><loc>https://topaitools.vip/articles/ai-coding-agents-vs-human-developers-2026.html</loc><priority>0.8</priority></url>
   <url><loc>https://topaitools.vip/articles/ai-for-small-business-2026.html</loc><priority>0.8</priority></url>
   <url><loc>https://topaitools.vip/articles/ai-tools-buying-guide-2026.html</loc><priority>0.8</priority></url>
+  <url><loc>https://topaitools.vip/articles/best-ai-agents-2026.html</loc><priority>0.8</priority></url>
   <url><loc>https://topaitools.vip/articles/best-ai-coding-assistants-2026.html</loc><priority>0.8</priority></url>
   <url><loc>https://topaitools.vip/articles/best-ai-data-analysis-tools-2026.html</loc><priority>0.8</priority></url>
   <url><loc>https://topaitools.vip/articles/best-ai-design-tools-2026.html</loc><priority>0.8</priority></url>
@@ -15,62 +22,28 @@
   <url><loc>https://topaitools.vip/articles/best-ai-logo-makers-2026.html</loc><priority>0.8</priority></url>
   <url><loc>https://topaitools.vip/articles/best-ai-meeting-summarizers-2026.html</loc><priority>0.8</priority></url>
   <url><loc>https://topaitools.vip/articles/best-ai-meeting-tools-2026.html</loc><priority>0.8</priority></url>
+  <url><loc>https://topaitools.vip/articles/best-ai-music-2026.html</loc><priority>0.8</priority></url>
   <url><loc>https://topaitools.vip/articles/best-ai-music-generators-2026.html</loc><priority>0.8</priority></url>
   <url><loc>https://topaitools.vip/articles/best-ai-note-taking-tools-2026.html</loc><priority>0.8</priority></url>
+  <url><loc>https://topaitools.vip/articles/best-ai-phone-2026.html</loc><priority>0.8</priority></url>
   <url><loc>https://topaitools.vip/articles/best-ai-presentation-makers-2026.html</loc><priority>0.8</priority></url>
   <url><loc>https://topaitools.vip/articles/best-ai-productivity-tools-2026.html</loc><priority>0.8</priority></url>
   <url><loc>https://topaitools.vip/articles/best-ai-seo-tools-2026.html</loc><priority>0.8</priority></url>
   <url><loc>https://topaitools.vip/articles/best-ai-social-media-tools-2026.html</loc><priority>0.8</priority></url>
   <url><loc>https://topaitools.vip/articles/best-ai-translation-tools-2026.html</loc><priority>0.8</priority></url>
   <url><loc>https://topaitools.vip/articles/best-ai-video-generators-2026.html</loc><priority>0.8</priority></url>
+  <url><loc>https://topaitools.vip/articles/best-ai-voice-cloning-2026.html</loc><priority>0.8</priority></url>
   <url><loc>https://topaitools.vip/articles/best-ai-voice-generators-2026.html</loc><priority>0.8</priority></url>
+  <url><loc>https://topaitools.vip/articles/best-ai-writing-tools-2026.html</loc><priority>0.8</priority></url>
   <url><loc>https://topaitools.vip/articles/best-free-ai-tools-2026.html</loc><priority>0.8</priority></url>
+  <url><loc>https://topaitools.vip/articles/best-open-source-ai-2026.html</loc><priority>0.8</priority></url>
   <url><loc>https://topaitools.vip/articles/chatgpt-vs-claude-vs-gemini-2026.html</loc><priority>0.8</priority></url>
-  <url><loc>https://topaitools.vip/articles/elon-musk-agi-humanoid-robots-2026.html</loc><priority>0.8</priority></url>
+  <url><loc>https://topaitools.vip/articles/elon-musk-agi-humanoid-robots-2026.html</loc><priority>0.7</priority></url>
   <url><loc>https://topaitools.vip/articles/google-io-2026-ai-announcements.html</loc><priority>0.8</priority></url>
-  <url><loc>https://topaitools.vip/articles/jensen-huang-ai-inference-revolution-2026.html</loc><priority>0.8</priority></url>
+  <url><loc>https://topaitools.vip/articles/jensen-huang-ai-inference-revolution-2026.html</loc><priority>0.7</priority></url>
+  <url><loc>https://topaitools.vip/articles/mammal-ai-beats-alphafold3-drug-discovery-2026.html</loc><priority>0.7</priority></url>
+  <url><loc>https://topaitools.vip/articles/morgan-stanley-ai-breakthrough-power-grid-2026.html</loc><priority>0.7</priority></url>
   <url><loc>https://topaitools.vip/articles/this-week-in-ai-may-12-2026.html</loc><priority>0.8</priority></url>
-  <url><loc>https://topaitools.vip/articles/zhou-hongyi-2026-ai-predictions.html</loc><priority>0.8</priority></url>
-  <url>
-    <loc>https://topaitools.vip/articles/best-ai-writing-tools-2026.html</loc>
-    <lastmod>2026-05-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://topaitools.vip/articles/mammal-ai-beats-alphafold3-drug-discovery-2026.html</loc>
-    <lastmod>2026-05-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://topaitools.vip/articles/morgan-stanley-ai-breakthrough-power-grid-2026.html</loc>
-    <lastmod>2026-05-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://topaitools.vip/ai-chat.html</loc>
-    <lastmod>2026-05-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://topaitools.vip/ai-tools.html</loc>
-    <lastmod>2026-05-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://topaitools.vip/ai-image-style.html</loc>
-    <lastmod>2026-05-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://topaitools.vip/ai-prompt-generator.html</loc>
-    <lastmod>2026-05-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <url><loc>https://topaitools.vip/articles/this-week-in-ai-may-23-2026.html</loc><priority>0.8</priority></url>
+  <url><loc>https://topaitools.vip/articles/zhou-hongyi-2026-ai-predictions.html</loc><priority>0.7</priority></url>
 </urlset>
